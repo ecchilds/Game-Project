@@ -18,7 +18,10 @@ public class GameApp {
         //import resources here
         Resources.load("game.litidata");
 
+        // add menu screen first, so it can display first. If that doesn't work,
+        // add Game.screens().display("MENU");
         Game.screens().add(new IngameScreen());
+        Game.screens().add(new MenuScreen());
 
         GameManager.init();
 

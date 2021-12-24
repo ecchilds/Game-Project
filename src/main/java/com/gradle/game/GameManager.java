@@ -1,34 +1,32 @@
 package com.gradle.game;
 
-import com.gradle.game.entities.BackWall;
+import com.gradle.game.entities.*;
 //import com.gradle.game.entities.CustomPropMapObjectLoader;
-import com.gradle.game.entities.DoorWay;
-import com.gradle.game.entities.Player;
-import com.gradle.game.entities.PlayerManager;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.entities.Spawnpoint;
-//import de.gurkenlabs.litiengine.environment.Environment;
 import de.gurkenlabs.litiengine.environment.Environment;
 import de.gurkenlabs.litiengine.environment.PropMapObjectLoader;
 import de.gurkenlabs.litiengine.graphics.Camera;
 import de.gurkenlabs.litiengine.graphics.PositionLockCamera;
+import de.gurkenlabs.litiengine.input.Input;
+import de.gurkenlabs.litiengine.physics.IMovementController;
 
 public final class GameManager {
     private GameManager() {
     }
 
     private static GameType currentGameType = GameType.SINGLEPLAYER;
-    private static int players = 1;
+    //private static int players = 1;
 
     public static void init() {
 
+        PlayerManager.init();
+
         //set locked camera to player
-        //TODO: modify for multiplayer
-        Camera camera = new PositionLockCamera(Player.instance());
+        //TODO: modify camera positioning for multiplayer
+        Camera camera = new PositionLockCamera(PlayerManager.getCurrent());
         camera.setClampToMap(true);
         Game.world().setCamera(camera);
-
-        PlayerManager.init();
 
         //allows doors to function, and know what to load
         //Environment.registerMapObjectLoader(new CustomPropMapObjectLoader());
@@ -37,18 +35,19 @@ public final class GameManager {
         //set loader for background
         PropMapObjectLoader.registerCustomPropType(BackWall.class);
 
-//        Input.gamepads().onAdded(e -> {
-//            //TODO: add multiplayer support
-//            if (Input.gamepads().getAll().size() < 2) {
-//                if (currentGameType == GameType.SINGLEPLAYER) {
-//                    //TODO: attach GamePad to player
-//                    IMovementController gamepadController = new GamepadEntityController<Player>(PlayerManager.getCurrent(), false);
-//                    Player.instance().addController(gamepadController);
-//                } else if (currentGameType == GameType.COOP) {
-//
-//                }
-//            }
-//        });
+        Input.gamepads().onAdded(e -> {
+            if (currentGameType == GameType.SINGLEPLAYER) {
+                //TODO: fix so that multiple gamepadControllers are not attached to same player.
+                // a menu to set current controller would be prudent. This should access the
+                // current gamepadcontroller attached to the player.
+                IMovementController gamepadController = new PlayerGamepadController(
+                        PlayerManager.getCurrent(),
+                        false);
+                PlayerManager.getCurrent().addController(gamepadController);
+            } else if (currentGameType == GameType.COOP) {
+                //TODO: add multiplayer support
+            }
+        });
 
         // add default game logic for when a level was loaded
         Game.world().onLoaded(e -> {
@@ -72,7 +71,7 @@ public final class GameManager {
 
         Spawnpoint enter = e.getSpawnpoint(spawnpointName);
         if (enter != null) {
-            enter.spawn(Player.instance());
+            enter.spawn(PlayerManager.getCurrent());
             Game.loop().perform(500, () -> {
                 //Player.instance().setVelocity(100);
                 PlayerManager.unFreezePlayers();

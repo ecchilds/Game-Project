@@ -29,7 +29,7 @@ public class DoorWay extends Prop {
 //        }
 
         // set event that occurs on player collision
-        // TODO: specify collision with player only, not any entity, then
+        // TODO: specify collision with player only, not any entity
         this.onCollision(e -> {
             //if (e.getInvolvedEntities().contains(Player.class)) {
             //Player.instance().setVelocity(0);
@@ -38,7 +38,7 @@ public class DoorWay extends Prop {
 
             Game.loop().perform(1500, () -> {
                 // remove player before unloading the environment or the instance's animation controller will be disposed
-                Game.world().environment().removeAll(PlayerManager.getAll());
+                Game.world().environment().removeAll(PlayerManager.getAll()); //TODO: replace with playermanager function
                 //Game.world().environment().remove(Player.instance());
 
                 //Load an environment, then spawn the player
@@ -54,15 +54,15 @@ public class DoorWay extends Prop {
     protected IEntityAnimationController<?> createAnimationController() {
         IEntityAnimationController<?> controller = new EntityAnimationController<>(this);
 
-//        controller.add(new Animation("prop-doorway-left", true, false));
+//        controller.add(new Animation("prop-doorwayleft", true, false));
         controller.add(new Animation("prop-doorwayright", true, true));
         controller.add(new Animation("prop-doorway", true, true));
-//        controller.add(new Animation("prop-doorway-up", true, false));
+//        controller.add(new Animation("prop-doorwayup", true, false));
 
-        //controller.addRule(x -> this.facing == Direction.LEFT, x -> "prop-doorway-left");
+        //controller.addRule(x -> this.getFacing() == Direction.LEFT, x -> "prop-doorwayleft");
         controller.addRule(x -> this.getFacing() == Direction.DOWN, x -> "prop-doorway");
         controller.addRule(x -> this.getFacing() == Direction.RIGHT, x -> "prop-doorwayright");
-        //controller.addRule(x -> this.facing == Direction.UP, x -> "prop-doorway-up");
+        //controller.addRule(x -> this.getFacing() == Direction.UP, x -> "prop-doorwayup");
 
         return controller;
     }

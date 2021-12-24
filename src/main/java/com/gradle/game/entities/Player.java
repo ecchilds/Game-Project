@@ -9,12 +9,13 @@ import de.gurkenlabs.litiengine.physics.IMovementController;
 public class Player extends Creature {
     private static Player instance;
 
-    public static Player instance() {
-        if (instance == null) {
-            instance = new Player();
-       }
+    public static Player instance() throws Exception {
+        throw new Exception("ERROR: deprecated function call");
+        //if (instance == null) {
+            //instance = new Player();
+        //}
 
-        return instance;
+        //return instance;
     }
 
     protected Player() {
@@ -33,7 +34,7 @@ public class Player extends Creature {
     @Override
     protected IMovementController createMovementController() {
         // setup movement controller
-        return new PlayerController(this);
+        return new PlayerKeyboardController(this);
     }
 
 //    @Override

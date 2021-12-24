@@ -7,7 +7,7 @@ apply plugin: 'application'
 
 //litiengine stuff
 natives {
-    configurations = ['runtime']
+    configurations = ['runtimeClasspath']
     outputDir = 'libs'
 }
 

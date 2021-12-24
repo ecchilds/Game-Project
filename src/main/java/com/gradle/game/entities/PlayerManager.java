@@ -7,12 +7,12 @@ import de.gurkenlabs.litiengine.entities.IEntityController;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlayerManager {
+public final class PlayerManager {
 
     //configuration variables
     private static final float defaultVelocity = 100;
 
-    private static ArrayList<Player> players = new ArrayList<Player>();
+    private static final ArrayList<Player> players = new ArrayList<Player>();
     private static boolean initialized = false;
 
     public static void init() {
