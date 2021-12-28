@@ -1,5 +1,6 @@
 package com.gradle.game.entities;
 
+import de.gurkenlabs.litiengine.input.Input;
 import de.gurkenlabs.litiengine.input.KeyboardEntityController;
 
 import java.awt.event.KeyEvent;
@@ -12,5 +13,10 @@ public class PlayerKeyboardController extends KeyboardEntityController<Player> {
         this.addDownKey(KeyEvent.VK_DOWN);
         this.addLeftKey(KeyEvent.VK_LEFT);
         this.addRightKey(KeyEvent.VK_RIGHT);
+
+        //player specific non-movement inputs
+        Input.keyboard().onKeyTyped(KeyEvent.VK_ESCAPE, e -> {
+            player.loadPauseMenu();
+        });
     }
 }

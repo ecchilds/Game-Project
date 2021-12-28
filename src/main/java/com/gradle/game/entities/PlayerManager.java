@@ -45,14 +45,20 @@ public final class PlayerManager {
     }
 
     public static void freezePlayers() {
-        players.forEach(p -> {
-            p.setVelocity(0);
-        });
+        setPlayerSpeeds(0);
     }
 
     public static void unFreezePlayers() {
+        setPlayerSpeeds(defaultVelocity);
+    }
+
+    public static void slowPlayers(int i) {
+        setPlayerSpeeds(defaultVelocity/i);
+    }
+
+    public static void setPlayerSpeeds(float i) {
         players.forEach(p -> {
-            p.setVelocity(defaultVelocity);
+            p.setVelocity(i);
         });
     }
 }

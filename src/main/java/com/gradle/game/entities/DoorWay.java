@@ -34,17 +34,17 @@ public class DoorWay extends Prop {
             //if (e.getInvolvedEntities().contains(Player.class)) {
             //Player.instance().setVelocity(0);
             PlayerManager.freezePlayers();
-            Game.window().getRenderComponent().fadeOut(1000);
+            Game.window().getRenderComponent().fadeOut(750);
 
-            Game.loop().perform(1500, () -> {
+            Game.loop().perform(750, () -> {
                 // remove player before unloading the environment or the instance's animation controller will be disposed
                 Game.world().environment().removeAll(PlayerManager.getAll()); //TODO: replace with playermanager function
                 //Game.world().environment().remove(Player.instance());
 
                 //Load an environment, then spawn the player
                 String room = GameManager.getRoom();
-                Environment env = Game.world().loadEnvironment(getMapToOpen());
-                GameManager.spawn(env, room+"-door");
+                //Environment env = Game.world().loadEnvironment(getMapToOpen());
+                GameManager.spawn(getMapToOpen(), room+"-door");
             });
             //}
         });

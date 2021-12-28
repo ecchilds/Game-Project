@@ -1,4 +1,4 @@
-package com.gradle.game;
+package com.gradle.game.gui;
 import de.gurkenlabs.litiengine.gui.screens.GameScreen;
 
 public class IngameScreen extends GameScreen {

@@ -24,6 +24,11 @@ dependencies {
     implementation 'de.gurkenlabs:litiengine:0.5.1'
 }
 
+sourceSets {
+    main.java.srcDir "src"
+    main.resources.srcDirs = ["resources","resources/fonts"]
+}
+
 test {
     useJUnitPlatform()
 }

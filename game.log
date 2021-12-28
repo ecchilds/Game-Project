@@ -1,593 +1,328 @@
-Dec 23, 2021 7:47:11 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:11 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:11 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:11 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:11 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:11 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:11 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:12 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:13 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:13 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:13 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:13 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:13 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:13 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:13 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:13 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:13 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:14 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:14 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:14 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 7:47:14 PM de.gurkenlabs.litiengine.UpdateLoop update
-SEVERE: Index 2 out of bounds for length 1
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
-	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
-	at de.gurkenlabs.litiengine.input.GamepadManager.get(GamepadManager.java:164)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.retrieveGamepadValues(GamepadEntityController.java:76)
-	at de.gurkenlabs.litiengine.input.GamepadEntityController.update(GamepadEntityController.java:43)
-	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
-	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
-	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:86)
-	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
-
-Dec 23, 2021 8:02:53 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+Dec 23, 2021 10:48:24 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
 WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
-Dec 23, 2021 8:02:53 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+Dec 23, 2021 10:48:24 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
 WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
-Dec 23, 2021 8:24:12 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+Dec 23, 2021 10:48:40 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
 WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
-Dec 23, 2021 8:24:12 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+Dec 23, 2021 10:48:40 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 10:50:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 10:50:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 10:50:16 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 10:50:16 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:20:34 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:20:34 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:20:35 PM de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.NullPointerException: Cannot read the array length because "items" is null
+	at de.gurkenlabs.litiengine.gui.Menu.<init>(Menu.java:24)
+	at de.gurkenlabs.litiengine.gui.Menu.<init>(Menu.java:20)
+	at com.gradle.game.MenuScreen.initializeComponents(MenuScreen.java:43)
+	at de.gurkenlabs.litiengine.gui.GuiComponent.<init>(GuiComponent.java:151)
+	at de.gurkenlabs.litiengine.gui.GuiComponent.<init>(GuiComponent.java:97)
+	at de.gurkenlabs.litiengine.gui.screens.Screen.<init>(Screen.java:14)
+	at com.gradle.game.MenuScreen.<init>(MenuScreen.java:17)
+	at com.gradle.game.GameApp.main(GameApp.java:23)
+
+Dec 23, 2021 11:21:57 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:21:57 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:25:44 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:25:44 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:25:52 PM de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
+	at com.gradle.game.MenuScreen.lambda$initializeComponents$0(MenuScreen.java:61)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$null$8(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$executeReleasedKeys$10(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.executeReleasedKeys(Keyboard.java:252)
+	at de.gurkenlabs.litiengine.input.Keyboard.update(Keyboard.java:189)
+	at de.gurkenlabs.litiengine.GameLoop.updateInvariableEngineComponents(GameLoop.java:127)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+Dec 23, 2021 11:26:48 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:26:48 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:26:54 PM de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
+	at com.gradle.game.MenuScreen.lambda$initializeComponents$0(MenuScreen.java:61)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$null$8(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$executeReleasedKeys$10(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.executeReleasedKeys(Keyboard.java:252)
+	at de.gurkenlabs.litiengine.input.Keyboard.update(Keyboard.java:189)
+	at de.gurkenlabs.litiengine.GameLoop.updateInvariableEngineComponents(GameLoop.java:127)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+Dec 23, 2021 11:29:45 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:29:45 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:29:57 PM de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
+	at com.gradle.game.MenuScreen.lambda$initializeComponents$0(MenuScreen.java:61)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$null$8(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$executeReleasedKeys$10(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.executeReleasedKeys(Keyboard.java:252)
+	at de.gurkenlabs.litiengine.input.Keyboard.update(Keyboard.java:189)
+	at de.gurkenlabs.litiengine.GameLoop.updateInvariableEngineComponents(GameLoop.java:127)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+Dec 23, 2021 11:31:38 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:31:38 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:35:22 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:35:22 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:36:02 PM de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
+	at com.gradle.game.MenuScreen.lambda$initializeComponents$0(MenuScreen.java:61)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$null$8(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$executeReleasedKeys$10(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.executeReleasedKeys(Keyboard.java:252)
+	at de.gurkenlabs.litiengine.input.Keyboard.update(Keyboard.java:189)
+	at de.gurkenlabs.litiengine.GameLoop.updateInvariableEngineComponents(GameLoop.java:127)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+Dec 23, 2021 11:37:15 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:37:15 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:37:35 PM de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.elementAt(CopyOnWriteArrayList.java:385)
+	at java.base/java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:398)
+	at com.gradle.game.MenuScreen.lambda$initializeComponents$0(MenuScreen.java:61)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$null$8(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.lambda$executeReleasedKeys$10(Keyboard.java:255)
+	at java.base/java.util.concurrent.ConcurrentHashMap$KeySetView.forEach(ConcurrentHashMap.java:4706)
+	at de.gurkenlabs.litiengine.input.Keyboard.executeReleasedKeys(Keyboard.java:252)
+	at de.gurkenlabs.litiengine.input.Keyboard.update(Keyboard.java:189)
+	at de.gurkenlabs.litiengine.GameLoop.updateInvariableEngineComponents(GameLoop.java:127)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+Dec 23, 2021 11:38:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:38:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:42:21 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:42:21 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:43:47 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:43:47 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:45:04 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:45:04 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:46:30 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:46:30 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:46:51 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:46:51 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:54:51 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 23, 2021 11:54:51 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 24, 2021 12:16:30 AM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 24, 2021 12:16:30 AM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:30:04 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:30:04 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:35:07 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:35:07 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:36:14 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:36:14 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:37:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:37:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:40:39 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:40:39 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:40:48 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:40:48 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:41:03 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:41:03 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:42:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:42:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:42:52 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:42:52 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:43:03 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:43:03 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:43:29 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:43:29 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:44:14 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:44:14 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:44:26 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:44:26 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:44:39 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:44:39 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:45:12 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:45:12 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:48:19 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 7:48:19 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:30:53 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:30:53 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:32:06 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:32:06 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:34:04 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:34:04 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:37:08 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:37:08 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:37:16 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:37:16 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:46:16 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:46:16 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:46:29 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:46:29 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:48:35 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:48:35 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:50:15 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:50:15 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:55:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:55:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:59:28 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 8:59:28 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 9:02:12 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 9:02:12 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 9:04:37 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 9:04:37 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 10:35:01 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 10:35:01 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 10:35:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 10:35:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 10:59:45 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 10:59:45 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:00:34 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:00:34 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:01:27 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:01:27 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:02:23 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:02:23 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:03:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:03:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:04:47 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:04:47 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:28:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:28:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:29:45 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Dec 27, 2021 11:29:45 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
 WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.

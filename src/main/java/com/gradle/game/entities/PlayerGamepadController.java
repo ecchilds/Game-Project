@@ -15,10 +15,24 @@ public class PlayerGamepadController extends MovementController<Player> {
     private double gamepadDeadzone = Game.config().input().getGamepadStickDeadzone();
     private double gamepadRightStick = Game.config().input().getGamepadStickDeadzone();
 
-    public PlayerGamepadController(Player entity, boolean rotateWithRightStick) {
-        super(entity);
-        this.gamepadId = Input.gamepads().current().getId();
+    public PlayerGamepadController(Player player) {
+        this(player, Input.gamepads().current().getId());
+    }
+
+    public PlayerGamepadController(Player player, int gamepadId) {
+        this(player, gamepadId, false);
+    }
+
+    public PlayerGamepadController(Player player, int gamepadId, boolean rotateWithRightStick) {
+
+        super(player);
+        this.gamepadId = gamepadId;
         this.rotateWithRightStick = rotateWithRightStick;
+
+        Gamepad gamepad = Input.gamepads().getById(gamepadId);
+        gamepad.onPressed(Gamepad.Xbox.START, e -> {
+            player.loadPauseMenu();
+        });
 
         //TODO: add an "onadded" listener which prompts user.
         Input.gamepads().onRemoved(pad -> {
