@@ -2,7 +2,7 @@ package com.gradle.game.entities;
 
 import com.gradle.game.GameManager;
 import com.gradle.game.GameType;
-import de.gurkenlabs.litiengine.entities.IEntityController;
+import de.gurkenlabs.litiengine.physics.IMovementController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public final class PlayerManager {
     //configuration variables
     private static final float defaultVelocity = 100;
 
-    private static final ArrayList<Player> players = new ArrayList<Player>();
+    private static final ArrayList<Player> players = new ArrayList<>();
     private static boolean initialized = false;
 
     public static void init() {
@@ -20,7 +20,8 @@ public final class PlayerManager {
         if (gameType == GameType.SINGLEPLAYER) {
             players.add(new Player("hoodie"));
         } else {
-            //TODO: implement multi-player loader
+            players.add(new Player("hoodie"));
+            addPlayer("hoodie", true);
         }
 
         initialized = true;
@@ -31,16 +32,23 @@ public final class PlayerManager {
     }
 
     public static Player get(int playerNumber) {
-        return initialized ? players.get(playerNumber) : null;
+        if(!initialized) {
+            System.err.println("SEVERE ERROR: uninitialized PlayerManager accessed.");
+            System.exit(1);
+        }
+
+        return players.get(playerNumber);
     }
 
     public static List<Player> getAll() {
         return players;
     }
 
-    public static void addPlayer(String spriteSheetName, IEntityController controller) {
+    public static void addPlayer(String spriteSheetName, boolean gamepad) {
         Player player = new Player(spriteSheetName);
-        player.addController(controller); //TODO: check if this works, or if there's a better implementation
+        if (gamepad) {
+            player.setController(IMovementController.class, new PlayerGamepadController(player));
+        }
         players.add(player);
     }
 
@@ -57,8 +65,6 @@ public final class PlayerManager {
     }
 
     public static void setPlayerSpeeds(float i) {
-        players.forEach(p -> {
-            p.setVelocity(i);
-        });
+        players.forEach(p -> p.setVelocity(i));
     }
 }

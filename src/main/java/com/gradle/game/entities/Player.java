@@ -1,17 +1,25 @@
 package com.gradle.game.entities;
+import com.gradle.game.PlayerEntityControllers;
 import com.gradle.game.gui.PauseScreen;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.Valign;
 import de.gurkenlabs.litiengine.entities.*;
+import de.gurkenlabs.litiengine.graphics.animation.IEntityAnimationController;
+import de.gurkenlabs.litiengine.input.Gamepad;
+import de.gurkenlabs.litiengine.input.Input;
 import de.gurkenlabs.litiengine.physics.IMovementController;
+
 
 @EntityInfo(width = 32, height = 32)
 @MovementInfo(velocity = 100)
 @CollisionInfo(collisionBoxWidth = 20, collisionBoxHeight = 6, collision = true, valign = Valign.DOWN)
 public class Player extends Creature {
-    private static Player instance;
     public int id;
+    private boolean keyboard = true;
 
+    private PlayerEntityControllers controllers;
+
+    @Deprecated
     public static Player instance() throws Exception {
         throw new Exception("ERROR: deprecated function call");
         //if (instance == null) {
@@ -21,9 +29,9 @@ public class Player extends Creature {
         //return instance;
     }
 
-    protected Player() {
-        this("hoodie");
-    }
+//    protected Player() {
+//        this("hoodie");
+//    }
 
     protected Player(String spritesheetName) {
         super(spritesheetName);
@@ -39,11 +47,87 @@ public class Player extends Creature {
     @Override
     protected IMovementController createMovementController() {
         // setup movement controller
+        keyboard = true;
         return new PlayerKeyboardController(this);
     }
 
     public void loadPauseMenu() {
-        Game.screens().display("MENU-P"+id+"PAUSE");
+        if(Game.screens().current().getName().equals("INGAME-SCREEN")) {
+            Game.screens().display("MENU-P" + id + "PAUSE");
+        } else {
+            Game.screens().display("INGAME-SCREEN");
+            PlayerManager.unFreezePlayers();
+        }
+    }
+
+    public Gamepad getGamepad() {
+        if (keyboard) {
+            return null;
+        }
+        // id
+        return Input.gamepads().getById(this.getController(PlayerGamepadController.class).getId());
+    }
+
+    public boolean isKeyboardControlled() {
+        return keyboard;
+    }
+
+    public void setKeyboardControlled(boolean k) {
+        this.keyboard = k;
+    }
+
+    // ========================================================================================================================
+    // Overrides to make PlayerEntityControllers class work follow.
+
+    private PlayerEntityControllers controllers() {
+        if(this.controllers == null) {
+            this.controllers = new PlayerEntityControllers();
+        }
+        return controllers;
+    }
+
+    @Override
+    public <T extends IEntityController> void setController(Class<T> clss, T controller) {
+        this.controllers().setController(clss, controller);
+    }
+
+    @Override
+    public void attachControllers() {
+        this.controllers().attachAll();
+    }
+
+    @Override
+    public void detachControllers() {
+        this.controllers().detachAll();
+    }
+
+    @Override
+    public IEntityAnimationController<?> animations() {
+        return this.controllers().getAnimationController();
+    }
+
+    @Override
+    public void addController(IEntityController controller) {
+        this.controllers().addController(controller);
+    }
+
+    //@Override
+    //protected EntityControllers getControllers() {
+    //    return this.controllers;
+    //}
+
+    @Override
+    protected void updateAnimationController() {
+        IEntityAnimationController<?> controller = this.createAnimationController();
+        this.controllers().addController(controller);
+        if (Game.world().environment() != null && Game.world().environment().isLoaded()) {
+            Game.loop().attach(controller);
+        }
+    }
+
+    @Override
+    public <T extends IEntityController> T getController(Class<T> clss) {
+        return this.controllers().getController(clss);
     }
 
 //    @Override

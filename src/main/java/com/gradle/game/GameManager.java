@@ -1,15 +1,12 @@
 package com.gradle.game;
 
 import com.gradle.game.entities.*;
-//import com.gradle.game.entities.CustomPropMapObjectLoader;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.entities.Spawnpoint;
 import de.gurkenlabs.litiengine.environment.Environment;
 import de.gurkenlabs.litiengine.environment.PropMapObjectLoader;
 import de.gurkenlabs.litiengine.graphics.Camera;
 import de.gurkenlabs.litiengine.graphics.PositionLockCamera;
-import de.gurkenlabs.litiengine.input.Input;
-import de.gurkenlabs.litiengine.physics.IMovementController;
 
 public final class GameManager {
     private GameManager() {
@@ -37,7 +34,6 @@ public final class GameManager {
 
 //        Input.gamepads().onAdded(e -> {
 //            if (currentGameType == GameType.SINGLEPLAYER) {
-//                //TODO: fix so that multiple gamepadControllers are not attached to same player.
 //                // a menu to set current controller would be prudent. This should access the
 //                // current gamepadcontroller attached to the player.
 //                IMovementController gamepadController = new PlayerGamepadController(
@@ -57,7 +53,7 @@ public final class GameManager {
     }
 
     public static void loadLevel() {
-        if (Game.screens().current().getName() == "MENU-MAIN") {
+        if (Game.screens().current().getName().equals("MENU-MAIN")) {
             Game.window().getRenderComponent().fadeOut(500);
             Game.loop().perform(500, () -> {
                 Game.screens().display("INGAME-SCREEN");
@@ -69,7 +65,7 @@ public final class GameManager {
         }
     }
 
-    public static String getRoom() {
+    public static String getRoomName() {
         return Game.world().environment().getMap().getName();
     }
 
@@ -77,24 +73,25 @@ public final class GameManager {
         return currentGameType;
     }
 
-    //loads an environment, then spawns in a player
-    public static boolean spawn(String mapName, String spawnpointName) {
-        return spawn(mapName, spawnpointName, 500);
+    public static void setCurrentGameType(GameType newGameType) {
+        currentGameType = newGameType;
     }
-    public static boolean spawn(String mapName, String spawnpointName, int fade ) {
+
+    //loads an environment, then spawns in a player
+    public static void spawn(String mapName, String spawnpointName) {
+        spawn(mapName, spawnpointName, 500);
+    }
+    public static void spawn(String mapName, String spawnpointName, int fade ) {
         //fade in regardless for easy debugging
         Environment e = Game.world().loadEnvironment(mapName);
         Game.window().getRenderComponent().fadeIn(fade);
 
         Spawnpoint enter = e.getSpawnpoint(spawnpointName);
         if (enter != null) {
-            enter.spawn(PlayerManager.getCurrent());
-            Game.loop().perform(fade, () -> {
-                //Player.instance().setVelocity(100);
-                PlayerManager.unFreezePlayers();
-            });
-            return true;
+            PlayerManager.getAll().forEach(enter::spawn);
+            Game.loop().perform(fade, PlayerManager::unFreezePlayers);
+        } else {
+            System.err.println("SEVERE ERROR: no such spawnpoint: " + spawnpointName);
         }
-        return false;
     }
 }

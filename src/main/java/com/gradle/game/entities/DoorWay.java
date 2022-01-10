@@ -7,7 +7,6 @@ import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.entities.AnimationInfo;
 import de.gurkenlabs.litiengine.entities.CollisionInfo;
 import de.gurkenlabs.litiengine.entities.Prop;
-import de.gurkenlabs.litiengine.environment.Environment;
 import de.gurkenlabs.litiengine.graphics.animation.Animation;
 import de.gurkenlabs.litiengine.graphics.animation.EntityAnimationController;
 import de.gurkenlabs.litiengine.graphics.animation.IEntityAnimationController;
@@ -42,7 +41,7 @@ public class DoorWay extends Prop {
                 //Game.world().environment().remove(Player.instance());
 
                 //Load an environment, then spawn the player
-                String room = GameManager.getRoom();
+                String room = GameManager.getRoomName();
                 //Environment env = Game.world().loadEnvironment(getMapToOpen());
                 GameManager.spawn(getMapToOpen(), room+"-door");
             });

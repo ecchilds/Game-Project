@@ -1,7 +1,6 @@
 package com.gradle.game.entities;
 
 import de.gurkenlabs.litiengine.Game;
-import de.gurkenlabs.litiengine.entities.IMobileEntity;
 import de.gurkenlabs.litiengine.input.Gamepad;
 import de.gurkenlabs.litiengine.input.Input;
 import de.gurkenlabs.litiengine.physics.MovementController;
@@ -10,10 +9,10 @@ import de.gurkenlabs.litiengine.util.geom.GeometricUtilities;
 import java.awt.geom.Point2D;
 
 public class PlayerGamepadController extends MovementController<Player> {
-    private boolean rotateWithRightStick;
+    private final boolean rotateWithRightStick;
     private int gamepadId;
-    private double gamepadDeadzone = Game.config().input().getGamepadStickDeadzone();
-    private double gamepadRightStick = Game.config().input().getGamepadStickDeadzone();
+    private final double gamepadDeadzone = Game.config().input().getGamepadStickDeadzone();
+    private final double gamepadRightStick = Game.config().input().getGamepadStickDeadzone();
 
     public PlayerGamepadController(Player player) {
         this(player, Input.gamepads().current().getId());
@@ -30,9 +29,7 @@ public class PlayerGamepadController extends MovementController<Player> {
         this.rotateWithRightStick = rotateWithRightStick;
 
         Gamepad gamepad = Input.gamepads().getById(gamepadId);
-        gamepad.onPressed(Gamepad.Xbox.START, e -> {
-            player.loadPauseMenu();
-        });
+        gamepad.onPressed(Gamepad.Xbox.START, e -> player.loadPauseMenu());
 
         //TODO: add an "onadded" listener which prompts user.
         Input.gamepads().onRemoved(pad -> {
@@ -55,7 +52,7 @@ public class PlayerGamepadController extends MovementController<Player> {
     //majority of code taken from GamepadEntityController, adjusted for index errors
     private void retrieveGamepadValues() {
         final Gamepad gamepad = Input.gamepads().getById(this.gamepadId);
-        if (this.gamepadId == -1 || this.gamepadId != -1 && gamepad == null) {
+        if (this.gamepadId == -1 || gamepad == null) {
                 return;
         }
 
@@ -88,5 +85,13 @@ public class PlayerGamepadController extends MovementController<Player> {
                 this.getEntity().setAngle((float) angle);
             }
         }
+    }
+
+    public double getGamepadDeadzone() {
+        return gamepadDeadzone;
+    }
+
+    public int getId() {
+        return gamepadId;
     }
 }
