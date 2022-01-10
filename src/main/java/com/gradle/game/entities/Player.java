@@ -12,7 +12,7 @@ import de.gurkenlabs.litiengine.physics.IMovementController;
 
 @EntityInfo(width = 32, height = 32)
 @MovementInfo(velocity = 100)
-@CollisionInfo(collisionBoxWidth = 20, collisionBoxHeight = 6, collision = true, valign = Valign.DOWN)
+@CollisionInfo(collisionBoxWidth = 18, collisionBoxHeight = 6, collision = true, valign = Valign.DOWN)
 public class Player extends Creature {
     public int id;
     private boolean keyboard = true;
@@ -34,8 +34,11 @@ public class Player extends Creature {
 //    }
 
     protected Player(String spritesheetName) {
+        this(spritesheetName, 0);
+    }
+    protected Player(String spritesheetName, int id) {
         super(spritesheetName);
-        this.id = 0; // TODO: modify for multiple ids
+        this.id = id;
         Game.screens().add(new PauseScreen(id));
     }
 
@@ -111,6 +114,9 @@ public class Player extends Creature {
         this.controllers().addController(controller);
     }
 
+    public <T extends IEntityController> void removeController(Class<T> clss) {
+        this.controllers().clearControllers(clss);
+    }
     //@Override
     //protected EntityControllers getControllers() {
     //    return this.controllers;

@@ -11,18 +11,15 @@ public final class PlayerManager {
 
     //configuration variables
     private static final float defaultVelocity = 100;
+    private static int currentPlayerNum;
 
     private static final ArrayList<Player> players = new ArrayList<>();
     private static boolean initialized = false;
 
     public static void init() {
         GameType gameType = GameManager.getCurrentGameType();
-        if (gameType == GameType.SINGLEPLAYER) {
-            players.add(new Player("hoodie"));
-        } else {
-            players.add(new Player("hoodie"));
-            addPlayer("hoodie", true);
-        }
+        currentPlayerNum = 1;
+        players.add(new Player("hoodie"));
 
         initialized = true;
     }
@@ -44,12 +41,26 @@ public final class PlayerManager {
         return players;
     }
 
+    public static Player getByGamepadId(int id) {
+        for (int i = 0; i < players.size(); i++) {
+            Player player = players.get(i);
+            if (!player.isKeyboardControlled() && player.getGamepad().getId() == id) {
+                return player;
+            }
+        }
+        System.err.println("ERROR: player with given gamepad id '"+id+"' does not exist.");
+        return null;
+    }
+
     public static void addPlayer(String spriteSheetName, boolean gamepad) {
-        Player player = new Player(spriteSheetName);
+        Player player = new Player(spriteSheetName, currentPlayerNum);
+        currentPlayerNum++;
         if (gamepad) {
             player.setController(IMovementController.class, new PlayerGamepadController(player));
+            player.setKeyboardControlled(false);
         }
         players.add(player);
+        GameManager.spawnIn(player);
     }
 
     public static void freezePlayers() {

@@ -83,7 +83,7 @@ public class MenuScreen extends Screen {
                 super.initializeComponents();
                 this.setFont(FontTypes.TITLE);
                 this.getAppearance().setForeColor(new Color(255,255,255));
-                this.setText("Gamer Zone");
+                this.setText(getTitle());
                 this.setDimension(450, FontTypes.TITLE.getSize());
                 this.getAppearanceHovered().update(GuiProperties.getDefaultAppearance());
             }
@@ -123,6 +123,8 @@ public class MenuScreen extends Screen {
             }
         });
     }
+
+    protected String getTitle() {return "Gamer Zone";};
 
     // override to change menu items
     protected String[] getMenuOptions() {

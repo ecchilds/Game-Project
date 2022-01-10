@@ -19,6 +19,11 @@ public class PauseScreen extends MenuScreen {
     }
 
     @Override
+    protected String getTitle() {
+        return "Player "+(playerId+1)+" Pause Menu";
+    }
+
+    @Override
     protected String[] getMenuOptions() {
         return new String[]{"Configure Controllers", "Return"};
     }
@@ -33,7 +38,7 @@ public class PauseScreen extends MenuScreen {
             this.gamepadListener = event -> {
                 float poll = event.getValue();
                 String button = event.getComponent();
-                System.out.println(button); //TODO: figure out how to specify axis. see what its name is.
+                System.out.println(button);
                 //NOTE: using string literals instead of Gamepad.Xbox, or similar, because those don't seem to work.
                 if (button.equals("Y Axis") && Math.abs(poll) > event.getGamepad().getAxisDeadzone()) {
                 //if (Math.abs(poll) > event.getGamepad().getAxisDeadzone()) {

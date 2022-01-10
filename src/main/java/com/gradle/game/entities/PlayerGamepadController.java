@@ -2,6 +2,7 @@ package com.gradle.game.entities;
 
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.input.Gamepad;
+import de.gurkenlabs.litiengine.input.GamepadEvents;
 import de.gurkenlabs.litiengine.input.Input;
 import de.gurkenlabs.litiengine.physics.MovementController;
 import de.gurkenlabs.litiengine.util.geom.GeometricUtilities;
@@ -13,6 +14,7 @@ public class PlayerGamepadController extends MovementController<Player> {
     private int gamepadId;
     private final double gamepadDeadzone = Game.config().input().getGamepadStickDeadzone();
     private final double gamepadRightStick = Game.config().input().getGamepadStickDeadzone();
+    private final GamepadEvents.GamepadReleasedListener pauseButtonListener;
 
     public PlayerGamepadController(Player player) {
         this(player, Input.gamepads().current().getId());
@@ -29,9 +31,10 @@ public class PlayerGamepadController extends MovementController<Player> {
         this.rotateWithRightStick = rotateWithRightStick;
 
         Gamepad gamepad = Input.gamepads().getById(gamepadId);
-        gamepad.onPressed(Gamepad.Xbox.START, e -> player.loadPauseMenu());
 
-        //TODO: add an "onadded" listener which prompts user.
+        // pause menu event
+        this.pauseButtonListener = e -> player.loadPauseMenu();
+
         Input.gamepads().onRemoved(pad -> {
             if (this.gamepadId == pad.getId()) {
                 this.gamepadId = -1;
@@ -93,5 +96,17 @@ public class PlayerGamepadController extends MovementController<Player> {
 
     public int getId() {
         return gamepadId;
+    }
+
+    @Override
+    public void attach() {
+        super.attach();
+        Input.gamepads().getById(this.gamepadId).onReleased(Gamepad.Xbox.START, pauseButtonListener);
+    }
+
+    @Override
+    public void detach() {
+        super.detach();
+        Input.gamepads().getById(this.gamepadId).removeReleasedListener(Gamepad.Xbox.START, this.pauseButtonListener);
     }
 }

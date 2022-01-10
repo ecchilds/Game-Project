@@ -293,3 +293,158 @@ Jan 09, 2022 6:54:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap 
 WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
 Jan 09, 2022 6:54:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
 WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 7:29:52 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 7:29:52 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 7:45:15 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 7:45:15 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:04:57 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:04:57 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:06:03 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:06:03 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:06:09 PM de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.NullPointerException: Cannot invoke "de.gurkenlabs.litiengine.input.Gamepad.getId()" because the return value of "com.gradle.game.entities.Player.getGamepad()" is null
+	at com.gradle.game.entities.PlayerManager.getByGamepadId(PlayerManager.java:49)
+	at com.gradle.game.GameManager.lambda$init$1(GameManager.java:82)
+	at de.gurkenlabs.litiengine.input.GamepadManager.remove(GamepadManager.java:228)
+	at de.gurkenlabs.litiengine.input.Gamepad.dispose(Gamepad.java:205)
+	at de.gurkenlabs.litiengine.input.Gamepad.update(Gamepad.java:141)
+	at de.gurkenlabs.litiengine.GameLoop.updateInvariableEngineComponents(GameLoop.java:132)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+Jan 09, 2022 10:09:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:09:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:18:51 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:18:51 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:21:37 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:21:37 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:26:04 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:26:04 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:26:18 PM de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.NullPointerException: Cannot invoke "com.gradle.game.entities.Player.removeController(java.lang.Class)" because the return value of "com.gradle.game.entities.PlayerManager.getByGamepadId(int)" is null
+	at com.gradle.game.GameManager.lambda$init$1(GameManager.java:83)
+	at de.gurkenlabs.litiengine.input.GamepadManager.remove(GamepadManager.java:228)
+	at de.gurkenlabs.litiengine.input.Gamepad.dispose(Gamepad.java:205)
+	at de.gurkenlabs.litiengine.input.Gamepad.update(Gamepad.java:141)
+	at de.gurkenlabs.litiengine.GameLoop.updateInvariableEngineComponents(GameLoop.java:132)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+Jan 09, 2022 10:29:08 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:29:08 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:30:33 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:30:33 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:31:24 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:31:24 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:32:01 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:32:01 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:39:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:39:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:43:13 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:43:13 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:43:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:43:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:47:10 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:47:10 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:48:26 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:48:26 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:57:32 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 10:57:32 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:01:46 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:01:46 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:01:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:01:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:03:16 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:03:16 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:09:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:09:09 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:12:01 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:12:01 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:14:06 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:14:06 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:19:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:19:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:41:22 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:41:22 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:42:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:42:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:42:47 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:42:47 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:44:39 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:44:39 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:46:31 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:46:31 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:47:19 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:47:19 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:49:53 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:49:53 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:51:59 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 09, 2022 11:51:59 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.

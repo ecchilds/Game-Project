@@ -28,6 +28,42 @@ public class ControllerScreen extends MenuScreen {
     public ControllerScreen() {
         super("MENU-CONTROLLERS");
         this.mouseEnabled = false;
+
+        this.keyListener = event -> {
+
+            // check if keyboard has been selected
+            if (menu.getCellComponents().get(0).isEnabled()) {
+                PlayerManager.get(currentPlayer).setController(
+                        MovementController.class,
+                        new PlayerKeyboardController(PlayerManager.get(currentPlayer))
+                );
+                PlayerManager.get(currentPlayer).setKeyboardControlled(true);
+                menu.getCellComponents().get(0).setEnabled(false);
+                menuOptionSelect();
+            }
+        };
+
+        this.gamepadReleasedListener = event -> {
+            int id = event.getGamepad().getId();
+
+            // check if gamepad has already been selected
+            if (!selectedGamepads.contains(id)) {
+                selectedGamepads.add(id);
+                PlayerManager.get(currentPlayer).setController(
+                        MovementController.class,
+                        new PlayerGamepadController(PlayerManager.get(currentPlayer), id)
+                );
+                PlayerManager.get(currentPlayer).setKeyboardControlled(false);
+
+                menu.getCellComponents().get(currentGamepad).setEnabled(false);
+
+                currentGamepad++;
+
+                menuOptionSelect();
+            }
+        };
+
+        //TODO: gamepad removed listener for safety
     }
 
     @Override
@@ -75,47 +111,11 @@ public class ControllerScreen extends MenuScreen {
         // Parent's version is bad for this, while parent's parent's is empty.
         // Thus, not calling super causes no ill effects.
         //super.initializeComponents();
-
-        this.keyListener = event -> {
-
-            // check if keyboard has been selected
-            if (menu.getCellComponents().get(0).isEnabled()) {
-                PlayerManager.get(currentPlayer).setController(
-                        MovementController.class,
-                        new PlayerKeyboardController(PlayerManager.get(currentPlayer))
-                );
-                PlayerManager.get(currentPlayer).setKeyboardControlled(true);
-                menu.getCellComponents().get(0).setEnabled(false);
-                menuOptionSelect();
-            }
-        };
-
-        this.gamepadReleasedListener = event -> {
-            int id = event.getGamepad().getId();
-
-            // check if gamepad has already been selected
-            if (!selectedGamepads.contains(id)) {
-                PlayerManager.get(currentPlayer).setController(
-                        MovementController.class,
-                        new PlayerGamepadController(PlayerManager.get(currentPlayer), id)
-                );
-                PlayerManager.get(currentPlayer).setKeyboardControlled(false);
-
-                menu.getCellComponents().get(currentGamepad).setEnabled(false);
-
-                currentGamepad++;
-                selectedGamepads.add(id);
-
-                menuOptionSelect();
-            }
-        };
-
-        //TODO: gamepad removed listener for safety
     }
 
     @Override
     protected void setListeners() {
-        Game.loop().perform(1, () -> {
+        Game.loop().perform(100, () -> {
             Input.keyboard().onKeyReleased(keyListener);
             //has to be done manually
             Input.gamepads().getAll().forEach(controller -> controller.onReleased(gamepadReleasedListener));
@@ -152,7 +152,7 @@ public class ControllerScreen extends MenuScreen {
 
         if (this.currentPlayer < this.instances-1) {
             //set up next screen
-            this.currentPlayer++;
+            this.currentPlayer++; //TODO: BAD. FIX.
             this.playerLabel.setText("Player " + (currentPlayer +1));
         } else {
             this.menu.setEnabled(false);

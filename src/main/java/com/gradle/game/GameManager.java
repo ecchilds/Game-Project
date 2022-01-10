@@ -1,27 +1,38 @@
 package com.gradle.game;
 
 import com.gradle.game.entities.*;
+import com.gradle.game.gui.FontTypes;
+import com.gradle.game.gui.MultiLockCamera;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.entities.Spawnpoint;
 import de.gurkenlabs.litiengine.environment.Environment;
 import de.gurkenlabs.litiengine.environment.PropMapObjectLoader;
 import de.gurkenlabs.litiengine.graphics.Camera;
-import de.gurkenlabs.litiengine.graphics.PositionLockCamera;
+import de.gurkenlabs.litiengine.gui.GuiComponent;
+import de.gurkenlabs.litiengine.input.Gamepad;
+import de.gurkenlabs.litiengine.input.GamepadEvent;
+import de.gurkenlabs.litiengine.input.GamepadEvents;
+import de.gurkenlabs.litiengine.input.Input;
+import de.gurkenlabs.litiengine.physics.IMovementController;
+
+import java.awt.*;
 
 public final class GameManager {
     private GameManager() {
     }
 
     private static GameType currentGameType = GameType.SINGLEPLAYER;
-    //private static int players = 1;
+
+    //variables for adding new players via gamepad prompts
+    private static GuiComponent prompt = null;
+    private static GamepadEvents.GamepadReleasedListener start = null;
 
     public static void init() {
 
         PlayerManager.init();
 
         //set locked camera to player
-        //TODO: modify camera positioning for multiplayer
-        Camera camera = new PositionLockCamera(PlayerManager.getCurrent());
+        Camera camera = new MultiLockCamera(PlayerManager.getAll());
         camera.setClampToMap(true);
         Game.world().setCamera(camera);
 
@@ -32,17 +43,65 @@ public final class GameManager {
         //set loader for background
         PropMapObjectLoader.registerCustomPropType(BackWall.class);
 
-//        Input.gamepads().onAdded(e -> {
-//            if (currentGameType == GameType.SINGLEPLAYER) {
-//                // a menu to set current controller would be prudent. This should access the
-//                // current gamepadcontroller attached to the player.
-//                IMovementController gamepadController = new PlayerGamepadController(
-//                        PlayerManager.getCurrent());
-//                PlayerManager.getCurrent().addController(gamepadController);
-//            } else if (currentGameType == GameType.COOP) {
-//                //TODO: add multiplayer support
-//            }
-//        });
+        Input.gamepads().onAdded(gamepad -> {
+            if (currentGameType == GameType.SINGLEPLAYER) {
+                PlayerGamepadController gamepadController = new PlayerGamepadController(
+                        PlayerManager.getCurrent());
+                PlayerManager.getCurrent().addController(gamepadController);
+
+            } else { // co-op
+                final double centerX = Game.window().getResolution().getWidth() / 2.0;
+                final double bottom = Game.window().getResolution().getHeight();
+
+                // add prompt for new player saying that they can join in.
+                prompt = new GuiComponent(centerX-(450.0/2), bottom - 120) {
+                    @Override
+                    protected void initializeComponents() {
+                        super.initializeComponents();
+                        this.setFont(FontTypes.GEN);
+                        this.getAppearance().setForeColor(new Color(255,255,255));
+                        this.setTextShadow(true);
+                        this.setTextShadowColor(new Color(0,0,0));
+                        this.setDimension(450, FontTypes.GEN.getSize());
+                        this.setText("Press start to join");
+                        this.setVisible(true);
+                    }
+                };
+                Game.screens().get("INGAME-SCREEN").getComponents().add(prompt);
+
+                // add listener so new player can join in
+                start = new GamepadEvents.GamepadReleasedListener() {
+                    @Override
+                    public void released(GamepadEvent event) {
+                        Game.screens().get("INGAME-SCREEN").getComponents().remove(prompt);
+                        PlayerManager.addPlayer("hoodie", true);
+                        gamepad.removeReleasedListener(Gamepad.Xbox.START, this);
+
+                        prompt = null;
+                        start = null;
+                    }
+                };
+                gamepad.onReleased(Gamepad.Xbox.START, start);
+            }
+        });
+
+        Input.gamepads().onRemoved(gamepad -> {
+            if (currentGameType == GameType.COOP) {
+                //TODO: menu for reselecting controller? disconnect player? anything but this!
+                Player player = PlayerManager.getByGamepadId(gamepad.getId());
+                if (player != null) {
+                    player.removeController(IMovementController.class);
+                } else if (prompt != null) {
+                    Game.screens().get("INGAME-SCREEN").getComponents().remove(prompt);
+                    gamepad.removeReleasedListener(Gamepad.Xbox.START, start);
+                    prompt = null;
+                    start = null;
+                }
+
+            } else { // single player
+                PlayerManager.getCurrent().removeController(PlayerGamepadController.class);
+            }
+        });
 
         // add default game logic for when a level was loaded
         Game.world().onLoaded(e -> {
@@ -93,5 +152,9 @@ public final class GameManager {
         } else {
             System.err.println("SEVERE ERROR: no such spawnpoint: " + spawnpointName);
         }
+    }
+
+    public static void spawnIn(Player player) {
+        Game.world().environment().getSpawnpoint("enter").spawn(player);
     }
 }
