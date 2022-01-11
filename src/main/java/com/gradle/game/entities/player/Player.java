@@ -14,7 +14,7 @@ import de.gurkenlabs.litiengine.physics.IMovementController;
 
 @EntityInfo(width = 32, height = 32)
 @MovementInfo(velocity = 100)
-@CollisionInfo(collisionBoxWidth = 18, collisionBoxHeight = 6, collision = true, valign = Valign.DOWN)
+@CollisionInfo(collisionBoxWidth = 20, collisionBoxHeight = 6, collision = true, valign = Valign.DOWN)
 public class Player extends Creature {
     public int id;
     private boolean keyboard = true;
@@ -145,11 +145,6 @@ public class Player extends Creature {
     @Override
     public <T extends IEntityController> T getController(Class<T> clss) {
         return this.controllers().getController(clss);
-    }
-
-    @Override
-    public RenderType getRenderType() {
-        return RenderType.OVERLAY;
     }
 
 //    @Override

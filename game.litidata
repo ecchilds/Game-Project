@@ -322,11 +322,12 @@
     </object>
     <object id="10" type="PROP" x="87" y="138" width="20" height="86">
      <properties>
-      <property name="addShadow" type="bool" value="true"/>
+      <property name="addShadow" type="bool" value="false"/>
       <property name="collision" type="bool" value="true"/>
       <property name="collisionboxHeight" value="2.0"/>
       <property name="collisionboxWidth" value="19.0"/>
       <property name="indestructible" type="bool" value="false"/>
+      <property name="renderType" value="NORMAL"/>
       <property name="spritesheetName" value="doorverhang"/>
      </properties>
     </object>
@@ -337,6 +338,7 @@
       <property name="collisionboxHeight" value="3.0"/>
       <property name="collisionboxWidth" value="16.0"/>
       <property name="indestructible" type="bool" value="false"/>
+      <property name="renderType" value="NORMAL"/>
       <property name="spritesheetName" value="door"/>
      </properties>
     </object>
