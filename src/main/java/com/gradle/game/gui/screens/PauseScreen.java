@@ -1,7 +1,7 @@
-package com.gradle.game.gui;
+package com.gradle.game.gui.screens;
 
-import com.gradle.game.entities.Player;
-import com.gradle.game.entities.PlayerManager;
+import com.gradle.game.entities.player.Player;
+import com.gradle.game.entities.player.PlayerManager;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.gui.ImageComponent;
 
@@ -37,11 +37,11 @@ public class PauseScreen extends MenuScreen {
             PlayerManager.freezePlayers();
             this.gamepadListener = event -> {
                 float poll = event.getValue();
-                String button = event.getComponent();
-                System.out.println(button);
-                //NOTE: using string literals instead of Gamepad.Xbox, or similar, because those don't seem to work.
+                String button = event.getComponentName();
+                //System.out.println(button);
+                // NOTE: using string literals instead of Gamepad.Xbox, or similar, because those don't seem to work.
+                //if (button.equals(Gamepad.Xbox.LEFT_STICK_Y) && Math.abs(poll) > event.getGamepad().getAxisDeadzone()) {
                 if (button.equals("Y Axis") && Math.abs(poll) > event.getGamepad().getAxisDeadzone()) {
-                //if (Math.abs(poll) > event.getGamepad().getAxisDeadzone()) {
                     if (poll < 0) {
                         menu.setCurrentSelection(Math.max(0, menu.getCurrentSelection() - 1));
                     } else {

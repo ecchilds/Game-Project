@@ -1,9 +1,11 @@
-package com.gradle.game.entities;
-import com.gradle.game.PlayerEntityControllers;
-import com.gradle.game.gui.PauseScreen;
+package com.gradle.game.entities.player;
+import com.gradle.game.gui.screens.PauseScreen;
+import com.gradle.game.gui.windows.CreaturesWindow;
+import com.gradle.game.gui.windows.WindowManager;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.Valign;
 import de.gurkenlabs.litiengine.entities.*;
+import de.gurkenlabs.litiengine.graphics.RenderType;
 import de.gurkenlabs.litiengine.graphics.animation.IEntityAnimationController;
 import de.gurkenlabs.litiengine.input.Gamepad;
 import de.gurkenlabs.litiengine.input.Input;
@@ -17,7 +19,7 @@ public class Player extends Creature {
     public int id;
     private boolean keyboard = true;
 
-    private PlayerEntityControllers controllers;
+    private PlayerControllerManager controllers;
 
     @Deprecated
     public static Player instance() throws Exception {
@@ -40,6 +42,8 @@ public class Player extends Creature {
         super(spritesheetName);
         this.id = id;
         Game.screens().add(new PauseScreen(id));
+
+        WindowManager.add(new CreaturesWindow("P"+id+"-CREATURES"));
     }
 
 //    @Override
@@ -63,6 +67,12 @@ public class Player extends Creature {
         }
     }
 
+    public void loadCreaturesMenu() {
+        if(Game.screens().current().getName().equals("INGAME-SCREEN")) {
+            WindowManager.toggleDisplay("P"+id+"-CREATURES");
+        }
+    }
+
     public Gamepad getGamepad() {
         if (keyboard) {
             return null;
@@ -82,9 +92,9 @@ public class Player extends Creature {
     // ========================================================================================================================
     // Overrides to make PlayerEntityControllers class work follow.
 
-    private PlayerEntityControllers controllers() {
+    private PlayerControllerManager controllers() {
         if(this.controllers == null) {
-            this.controllers = new PlayerEntityControllers();
+            this.controllers = new PlayerControllerManager();
         }
         return controllers;
     }
@@ -134,6 +144,11 @@ public class Player extends Creature {
     @Override
     public <T extends IEntityController> T getController(Class<T> clss) {
         return this.controllers().getController(clss);
+    }
+
+    @Override
+    public RenderType getRenderType() {
+        return RenderType.OVERLAY;
     }
 
 //    @Override

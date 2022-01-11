@@ -1,7 +1,8 @@
-package com.gradle.game.gui;
+package com.gradle.game.gui.screens;
 
 import com.gradle.game.GameManager;
 import com.gradle.game.GameType;
+import com.gradle.game.gui.FontTypes;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.gui.GuiComponent;
 import de.gurkenlabs.litiengine.gui.GuiProperties;
@@ -76,7 +77,6 @@ public class MenuScreen extends Screen {
         this.options = getMenuOptions().length-1;
         this.menu = new Menu(centerX - buttonWidth / 2, centerY, buttonWidth, centerY / 4 * (options+1), getMenuOptions());
 
-        //TODO: move to override-able function
         GuiComponent title = new GuiComponent(centerX - 450/2.0, centerY/2) {
             @Override
             protected void initializeComponents() {
@@ -134,10 +134,10 @@ public class MenuScreen extends Screen {
     //override for inputs
     protected void menuOptionSelect() {
         switch (this.menu.getCurrentSelection()) {
-            case 0 -> GameManager.loadLevel();
+            case 0 -> GameManager.startGame();
             case 1 -> {
                 GameManager.setCurrentGameType(GameType.COOP);
-                GameManager.loadLevel();
+                GameManager.startGame();
             }
             case 2 -> System.exit(0);
         }

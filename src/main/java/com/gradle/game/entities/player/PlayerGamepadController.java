@@ -1,4 +1,4 @@
-package com.gradle.game.entities;
+package com.gradle.game.entities.player;
 
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.input.Gamepad;
@@ -14,7 +14,7 @@ public class PlayerGamepadController extends MovementController<Player> {
     private int gamepadId;
     private final double gamepadDeadzone = Game.config().input().getGamepadStickDeadzone();
     private final double gamepadRightStick = Game.config().input().getGamepadStickDeadzone();
-    private final GamepadEvents.GamepadReleasedListener pauseButtonListener;
+    private final GamepadEvents.GamepadReleasedListener buttonListener;
 
     public PlayerGamepadController(Player player) {
         this(player, Input.gamepads().current().getId());
@@ -32,8 +32,28 @@ public class PlayerGamepadController extends MovementController<Player> {
 
         Gamepad gamepad = Input.gamepads().getById(gamepadId);
 
-        // pause menu event
-        this.pauseButtonListener = e -> player.loadPauseMenu();
+        // Button inputs here
+        this.buttonListener = e -> {
+            //System.out.println(e.getComponentId());
+            switch (e.getComponentId()) {
+                case "pov" -> { // dpad
+                    float value = e.getValue();
+                    if (value < 0.375f) { // up
+                        player.loadCreaturesMenu();
+                    }
+//                    else if (value < 0.625f) { // right
+//
+//                    }
+//                    else if (value < 0.875f) { // down
+//
+//                    }
+//                    else { // left
+//
+//                    }
+                }
+                case "7" -> player.loadPauseMenu(); // pause button
+            }
+        };
 
         Input.gamepads().onRemoved(pad -> {
             if (this.gamepadId == pad.getId()) {
@@ -101,12 +121,20 @@ public class PlayerGamepadController extends MovementController<Player> {
     @Override
     public void attach() {
         super.attach();
-        Input.gamepads().getById(this.gamepadId).onReleased(Gamepad.Xbox.START, pauseButtonListener);
+        if(gamepadId != -1)
+            Input.gamepads().getById(this.gamepadId).onReleased(this.buttonListener);
+        else
+            System.out.println("WARNING: attached gamepad does not have listeners");
     }
 
     @Override
     public void detach() {
         super.detach();
-        Input.gamepads().getById(this.gamepadId).removeReleasedListener(Gamepad.Xbox.START, this.pauseButtonListener);
+        Gamepad gamepad = Input.gamepads().getById(this.gamepadId);
+        if (gamepad == null) {
+            System.out.println(this.gamepadId);
+            Input.gamepads().getAll().forEach(gp -> System.out.println(gp.getId()));
+        }
+        gamepad.removeReleasedListener(this.buttonListener);
     }
 }

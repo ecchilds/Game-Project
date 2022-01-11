@@ -1,9 +1,10 @@
-package com.gradle.game.gui;
+package com.gradle.game.gui.screens;
 
 
-import com.gradle.game.entities.PlayerGamepadController;
-import com.gradle.game.entities.PlayerKeyboardController;
-import com.gradle.game.entities.PlayerManager;
+import com.gradle.game.entities.player.PlayerGamepadController;
+import com.gradle.game.entities.player.PlayerKeyboardController;
+import com.gradle.game.entities.player.PlayerManager;
+import com.gradle.game.gui.FontTypes;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.gui.GuiComponent;
 import de.gurkenlabs.litiengine.gui.GuiProperties;
@@ -133,8 +134,6 @@ public class ControllerScreen extends MenuScreen {
 
         // mostly just used to clean up after listener procs
 
-        // controller fuckery
-        // TODO: change all of this to be based on listeners
 //        int selection = this.menu.getCurrentSelection();
 //        if(selection == 0) {
 //            PlayerManager.get(current).setController(
@@ -152,7 +151,7 @@ public class ControllerScreen extends MenuScreen {
 
         if (this.currentPlayer < this.instances-1) {
             //set up next screen
-            this.currentPlayer++; //TODO: BAD. FIX.
+            this.currentPlayer++;
             this.playerLabel.setText("Player " + (currentPlayer +1));
         } else {
             this.menu.setEnabled(false);

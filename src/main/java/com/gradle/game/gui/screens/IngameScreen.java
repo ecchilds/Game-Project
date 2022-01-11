@@ -1,4 +1,5 @@
-package com.gradle.game.gui;
+package com.gradle.game.gui.screens;
+import com.gradle.game.gui.windows.WindowManager;
 import de.gurkenlabs.litiengine.gui.screens.GameScreen;
 
 public class IngameScreen extends GameScreen {
@@ -6,5 +7,11 @@ public class IngameScreen extends GameScreen {
 
     public IngameScreen() {
         super(NAME);
+    }
+
+    @Override
+    public void prepare() {
+        super.prepare();
+        WindowManager.suspendAll();
     }
 }

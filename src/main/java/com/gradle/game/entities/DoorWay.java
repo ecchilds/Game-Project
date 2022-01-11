@@ -1,6 +1,7 @@
 package com.gradle.game.entities;
 
 import com.gradle.game.GameManager;
+import com.gradle.game.entities.player.PlayerManager;
 import de.gurkenlabs.litiengine.Direction;
 import de.gurkenlabs.litiengine.Game;
 //import de.gurkenlabs.litiengine.IUpdateable;
@@ -12,7 +13,7 @@ import de.gurkenlabs.litiengine.graphics.animation.EntityAnimationController;
 import de.gurkenlabs.litiengine.graphics.animation.IEntityAnimationController;
 
 @CollisionInfo(collision = true)
-@AnimationInfo(spritePrefix = "prop-doorway") //TODO: check if this works
+@AnimationInfo(spritePrefix = "prop-doorway")
 public class DoorWay extends Prop {
 
     //private String mapToOpen;

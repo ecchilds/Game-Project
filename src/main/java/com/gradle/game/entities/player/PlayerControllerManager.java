@@ -1,6 +1,6 @@
-package com.gradle.game;
+package com.gradle.game.entities.player;
 
-import com.gradle.game.entities.Player;
+import com.gradle.game.entities.player.Player;
 import de.gurkenlabs.litiengine.entities.IEntityController;
 import de.gurkenlabs.litiengine.graphics.animation.IEntityAnimationController;
 
@@ -9,11 +9,11 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 @SuppressWarnings("unchecked")
-public class PlayerEntityControllers {
+public class PlayerControllerManager {
     private Map<Class<? extends IEntityController>, IEntityController> controllers;
     private IEntityAnimationController<Player> animationController;
 
-    public PlayerEntityControllers() {
+    public PlayerControllerManager() {
         this.controllers = new ConcurrentHashMap<>();
     }
 

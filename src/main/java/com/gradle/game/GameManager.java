@@ -1,9 +1,14 @@
 package com.gradle.game;
 
 import com.gradle.game.entities.*;
+import com.gradle.game.entities.player.Player;
+import com.gradle.game.entities.player.PlayerGamepadController;
+import com.gradle.game.entities.player.PlayerManager;
 import com.gradle.game.gui.FontTypes;
 import com.gradle.game.gui.MultiLockCamera;
+import com.gradle.game.gui.windows.WindowManager;
 import de.gurkenlabs.litiengine.Game;
+import de.gurkenlabs.litiengine.GameListener;
 import de.gurkenlabs.litiengine.entities.Spawnpoint;
 import de.gurkenlabs.litiengine.environment.Environment;
 import de.gurkenlabs.litiengine.environment.PropMapObjectLoader;
@@ -29,6 +34,8 @@ public final class GameManager {
 
     public static void init() {
 
+        // Initialize managers.
+        WindowManager.init();
         PlayerManager.init();
 
         //set locked camera to player
@@ -43,6 +50,22 @@ public final class GameManager {
         //set loader for background
         PropMapObjectLoader.registerCustomPropType(BackWall.class);
 
+        Game.addGameListener(new GameListener() {
+            @Override
+            public void started() {
+                Game.window().getRenderComponent().fadeIn(300);
+            }
+        });
+
+        // add default game logic for when a level was loaded
+        //Game.world().onLoaded(e -> {
+
+            // spawn the player instance on the spawn point with the name "enter"
+            //spawn(e, "enter");
+        //});
+    }
+
+    public static void startGame() {
         Input.gamepads().onAdded(gamepad -> {
             if (currentGameType == GameType.SINGLEPLAYER) {
                 PlayerGamepadController gamepadController = new PlayerGamepadController(
@@ -103,25 +126,12 @@ public final class GameManager {
             }
         });
 
-        // add default game logic for when a level was loaded
-        Game.world().onLoaded(e -> {
-
-            // spawn the player instance on the spawn point with the name "enter"
-            //spawn(e, "enter");
+        Game.window().getRenderComponent().fadeOut(300);
+        Game.loop().perform(300, () -> {
+            Game.screens().display("INGAME-SCREEN");
+            PlayerManager.slowPlayers(2);
+            spawn("mansion", "enter",1000);
         });
-    }
-
-    public static void loadLevel() {
-        if (Game.screens().current().getName().equals("MENU-MAIN")) {
-            Game.window().getRenderComponent().fadeOut(500);
-            Game.loop().perform(500, () -> {
-                Game.screens().display("INGAME-SCREEN");
-                PlayerManager.slowPlayers(2);
-                spawn("mansion", "enter",1000);
-            });
-        } else {
-            spawn("mansion", "enter");
-        }
     }
 
     public static String getRoomName() {
@@ -143,14 +153,19 @@ public final class GameManager {
     public static void spawn(String mapName, String spawnpointName, int fade ) {
         //fade in regardless for easy debugging
         Environment e = Game.world().loadEnvironment(mapName);
+        //e.addAmbientLight
         Game.window().getRenderComponent().fadeIn(fade);
 
         Spawnpoint enter = e.getSpawnpoint(spawnpointName);
+        //System.out.println(enter.getSpawnPivotType());
         if (enter != null) {
-            PlayerManager.getAll().forEach(enter::spawn);
+            for (int i = 0; i < PlayerManager.size(); i++) {
+                enter.setSpawnOffsetY(7f*(float)i*Math.pow(-1,i));
+                enter.spawn(PlayerManager.get(i));
+            }
             Game.loop().perform(fade, PlayerManager::unFreezePlayers);
         } else {
-            System.err.println("SEVERE ERROR: no such spawnpoint: " + spawnpointName);
+            System.err.println("ERROR: no such spawnpoint: " + spawnpointName);
         }
     }
 

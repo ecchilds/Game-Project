@@ -1,6 +1,6 @@
 package com.gradle.game.gui;
 
-import com.gradle.game.entities.Player;
+import com.gradle.game.entities.player.Player;
 import de.gurkenlabs.litiengine.graphics.Camera;
 import java.awt.geom.Point2D;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.gradle.game.entities;
+package com.gradle.game.entities.player;
 
 import com.gradle.game.GameManager;
 import com.gradle.game.GameType;
@@ -77,5 +77,9 @@ public final class PlayerManager {
 
     public static void setPlayerSpeeds(float i) {
         players.forEach(p -> p.setVelocity(i));
+    }
+
+    public static int size() {
+        return players.size();
     }
 }

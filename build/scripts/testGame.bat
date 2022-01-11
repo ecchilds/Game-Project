@@ -67,7 +67,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\testGame-1.0-SNAPSHOT.jar;%APP_HOME%\lib\litiengine-0.5.1.jar;%APP_HOME%\lib\jinput-2.0.9.jar;%APP_HOME%\lib\jinput-2.0.9-natives-all.jar;%APP_HOME%\lib\vorbisspi-1.0.3.3.jar;%APP_HOME%\lib\jorbis-0.0.17.4.jar;%APP_HOME%\lib\mp3spi-1.9.5.4.jar;%APP_HOME%\lib\tritonus-share-0.3.7.4.jar;%APP_HOME%\lib\steamworks4j-1.8.0.jar;%APP_HOME%\lib\jaxb-api-2.4.0-b180830.0359.jar;%APP_HOME%\lib\javax.activation-api-1.2.0.jar;%APP_HOME%\lib\jaxb-core-2.3.0.1.jar;%APP_HOME%\lib\jaxb-impl-2.3.2.jar;%APP_HOME%\lib\jlayer-1.0.1.4.jar
+set CLASSPATH=%APP_HOME%\lib\testGame-1.0-SNAPSHOT.jar;%APP_HOME%\lib\litiengine-0.5.2.jar;%APP_HOME%\lib\jaxb-impl-3.0.1.jar;%APP_HOME%\lib\jaxb-core-3.0.1.jar;%APP_HOME%\lib\jakarta.xml.bind-api-3.0.1.jar;%APP_HOME%\lib\jinput-2.0.9.jar;%APP_HOME%\lib\vorbisspi-1.0.3.3.jar;%APP_HOME%\lib\jorbis-0.0.17.4.jar;%APP_HOME%\lib\mp3spi-1.9.5.4.jar;%APP_HOME%\lib\tritonus-share-0.3.7.4.jar;%APP_HOME%\lib\javax.activation-api-1.2.0.jar;%APP_HOME%\lib\jakarta.activation-2.0.1.jar;%APP_HOME%\lib\jlayer-1.0.1.4.jar;%APP_HOME%\lib\junit-3.8.2.jar
 
 
 @rem Execute testGame

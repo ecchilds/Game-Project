@@ -2,6 +2,11 @@
 <litidata version="1.0">
  <maps>
   <map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="1" name="mansion">
+   <properties>
+    <property name="AMBIENTLIGHT" value="#000000"/>
+    <property name="GRAVITY" type="int" value="0"/>
+    <property name="SHADOWCOLOR" value="#00000000"/>
+   </properties>
    <tileset firstgid="1" source="mansion.tsx"/>
    <imagelayer id="4" name="Image Layer 1">
     <image source="nightsky.png" width="256" height="128"/>
@@ -75,6 +80,7 @@
     <object id="13" type="COLLISIONBOX" x="96" y="160" width="25" height="192">
      <properties>
       <property name="collisionType" value="STATIC"/>
+      <property name="isObstructingLight" type="bool" value="false"/>
      </properties>
     </object>
     <object id="14" type="COLLISIONBOX" x="261" y="160" width="27" height="64">
@@ -228,7 +234,21 @@
       <property name="collisionType" value="STATIC"/>
      </properties>
     </object>
-    <object id="28" name="mansion2-door" type="SPAWNPOINT" x="320" y="256" width="32" height="32"/>
+    <object id="28" name="mansion2-door" type="SPAWNPOINT" x="321" y="263" width="32" height="32">
+     <properties>
+      <property name="spawnPivot" value="OFFSET"/>
+     </properties>
+    </object>
+    <object id="30" type="LIGHTSOURCE" x="88" y="26" width="299" height="291">
+     <properties>
+      <property name="lightActive" type="bool" value="true"/>
+      <property name="lightColor" value="#000000"/>
+      <property name="lightFocusOffsetX" value="-0.0"/>
+      <property name="lightFocusOffsetY" value="-0.0"/>
+      <property name="lightIntensity" value="0"/>
+      <property name="lightShape" value="ellipse"/>
+     </properties>
+    </object>
    </objectgroup>
    <layer id="2" name="forewalls" width="20" height="20">
     <data encoding="base64">
@@ -276,6 +296,7 @@
     <object id="7" name="mansion-door" type="SPAWNPOINT" x="96" y="170" width="32" height="32">
      <properties>
       <property name="spawnDirection" value="RIGHT"/>
+      <property name="spawnPivot" value="OFFSET"/>
      </properties>
     </object>
     <object id="1" type="PROP" x="32" y="128" width="96" height="96">
