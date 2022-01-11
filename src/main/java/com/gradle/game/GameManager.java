@@ -97,7 +97,7 @@ public final class GameManager {
                     @Override
                     public void released(GamepadEvent event) {
                         Game.screens().get("INGAME-SCREEN").getComponents().remove(prompt);
-                        PlayerManager.addPlayer("hoodie", true);
+                        PlayerManager.addPlayer("hoodie", event.getGamepad().getId());
                         gamepad.removeReleasedListener(Gamepad.Xbox.START, this);
 
                         prompt = null;

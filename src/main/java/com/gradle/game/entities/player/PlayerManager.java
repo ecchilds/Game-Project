@@ -63,6 +63,15 @@ public final class PlayerManager {
         GameManager.spawnIn(player);
     }
 
+    public static void addPlayer(String spriteSheetName, int gamepadId) {
+        Player player = new Player(spriteSheetName, currentPlayerNum);
+        currentPlayerNum++;
+        player.setController(IMovementController.class, new PlayerGamepadController(player, gamepadId));
+        player.setKeyboardControlled(false);
+        players.add(player);
+        GameManager.spawnIn(player);
+    }
+
     public static void freezePlayers() {
         setPlayerSpeeds(0);
     }
