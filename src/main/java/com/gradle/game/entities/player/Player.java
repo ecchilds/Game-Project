@@ -61,6 +61,7 @@ public class Player extends Creature {
     public void loadPauseMenu() {
         if(Game.screens().current().getName().equals("INGAME-SCREEN")) {
             Game.screens().display("MENU-P" + id + "PAUSE");
+            PlayerManager.freezePlayers();
         } else {
             Game.screens().display("INGAME-SCREEN");
             PlayerManager.unFreezePlayers();

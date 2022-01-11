@@ -2,6 +2,7 @@ package com.gradle.game.gui.screens;
 
 import com.gradle.game.GameManager;
 import com.gradle.game.GameType;
+import com.gradle.game.Sounds;
 import com.gradle.game.gui.FontTypes;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.gui.GuiComponent;
@@ -42,8 +43,7 @@ public class MenuScreen extends Screen {
 
             if ((event.getKeyCode() == KeyEvent.VK_ENTER || event.getKeyCode() == KeyEvent.VK_SPACE) && menu.isEnabled()) {
                 //Game.audio().playSound("confirm.wav");
-                menuOptionSelect();
-                removeListeners();
+                menuOptionSelectWrapper();
             }
         };
     }
@@ -117,10 +117,10 @@ public class MenuScreen extends Screen {
             comp.getAppearance().setBorderRadius(2);
             if (mouseEnabled) {
                 comp.onClicked(e -> {
-                    menuOptionSelect();
-                    removeListeners();
+                    menuOptionSelectWrapper();
                 });
             }
+            comp.onHovered(e -> Game.audio().playSound(Sounds.MENU_HOVER));
         });
     }
 
@@ -141,7 +141,13 @@ public class MenuScreen extends Screen {
             }
             case 2 -> System.exit(0);
         }
+    }
+
+    protected void menuOptionSelectWrapper() {
+        menuOptionSelect();
         this.menu.setEnabled(false); //disables all buttons, so they can't be entered multiple times
+        removeListeners();
+        Game.audio().playSound(Sounds.MENU_SELECT);
     }
 
     // don't override. this makes life easy
@@ -156,7 +162,7 @@ public class MenuScreen extends Screen {
                 comp.setHovered(false);
             }
             this.menu.getCellComponents().get(this.menu.getCurrentSelection()).setHovered(true);
-            //Game.audio().playSound("select.wav");
+            Game.audio().playSound(Sounds.MENU_HOVER);
         }
     }
 
