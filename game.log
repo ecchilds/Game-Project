@@ -354,3 +354,7 @@ Jan 11, 2022 4:03:42 AM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap 
 WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
 Jan 11, 2022 4:03:43 AM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
 WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Jan 11, 2022 4:06:00 AM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Jan 11, 2022 4:06:00 AM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.

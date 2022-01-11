@@ -3,7 +3,7 @@
  <maps>
   <map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="1" name="mansion">
    <properties>
-    <property name="AMBIENTLIGHT" value="#000000"/>
+    <property name="AMBIENTLIGHT" value="#00000000"/>
     <property name="GRAVITY" type="int" value="0"/>
     <property name="SHADOWCOLOR" value="#00000000"/>
    </properties>
