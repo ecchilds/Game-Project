@@ -342,6 +342,7 @@
       <property name="spritesheetName" value="door"/>
      </properties>
     </object>
+    <object id="12" name="enter" type="SPAWNPOINT" x="192" y="160" width="32" height="32"/>
    </objectgroup>
   </map>
  </maps>

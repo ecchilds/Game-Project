@@ -55,6 +55,12 @@ public final class GameManager {
             public void started() {
                 Game.window().getRenderComponent().fadeIn(300);
             }
+
+            @Override
+            public boolean terminating() {
+                PlayerManager.saveGames();
+                return GameListener.super.terminating();
+            }
         });
 
         // add default game logic for when a level was loaded
@@ -66,6 +72,7 @@ public final class GameManager {
     }
 
     public static void startGame() {
+
         Input.gamepads().onAdded(gamepad -> {
             if (currentGameType == GameType.SINGLEPLAYER) {
                 PlayerGamepadController gamepadController = new PlayerGamepadController(
@@ -97,7 +104,7 @@ public final class GameManager {
                     @Override
                     public void released(GamepadEvent event) {
                         Game.screens().get("INGAME-SCREEN").getComponents().remove(prompt);
-                        PlayerManager.addPlayer("hoodie", event.getGamepad().getId());
+                        PlayerManager.addPlayer("hoodie", "steve", event.getGamepad().getId());
                         gamepad.removeReleasedListener(Gamepad.Xbox.START, this);
 
                         prompt = null;
@@ -130,7 +137,7 @@ public final class GameManager {
         Game.loop().perform(300, () -> {
             Game.screens().display("INGAME-SCREEN");
             PlayerManager.slowPlayers(2);
-            spawn("mansion", "enter",1000);
+            spawn(PlayerManager.getCurrent().getSave().getMap(), "enter",1000);
         });
     }
 

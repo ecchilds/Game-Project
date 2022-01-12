@@ -25,7 +25,24 @@ public class PauseScreen extends MenuScreen {
 
     @Override
     protected String[] getMenuOptions() {
-        return new String[]{"Configure Controllers", "Return"};
+        return new String[]{"Save", "Configure Controllers", "Return", "Save and Exit"};
+    }
+
+    @Override
+    protected void menuOptionSelect() {
+        switch (this.menu.getCurrentSelection()) {
+            case 0 -> {
+                PlayerManager.get(playerId).saveGame();
+                Game.screens().display("INGAME-SCREEN");
+            }
+            case 1 -> Game.screens().display("MENU-CONTROLLERS");
+            case 2 -> {
+                Game.screens().display("INGAME-SCREEN");
+                PlayerManager.unFreezePlayers();
+            }
+            case 3 -> Game.exit();
+        }
+        this.menu.setEnabled(false);
     }
 
     @Override
@@ -35,7 +52,7 @@ public class PauseScreen extends MenuScreen {
             super.setListeners();
         } else {
             PlayerManager.freezePlayers();
-            this.gamepadListener = event -> {
+            this.gamepadListener = event -> { // TODO: revamp with switch/case and id instead of name
                 float poll = event.getValue();
                 String button = event.getComponentName();
                 //System.out.println(button);
@@ -69,17 +86,5 @@ public class PauseScreen extends MenuScreen {
         } else {
             player.getGamepad().removePollListener(this.gamepadListener);
         }
-    }
-
-    @Override
-    protected void menuOptionSelect() {
-        switch (this.menu.getCurrentSelection()) {
-            case 0 -> Game.screens().display("MENU-CONTROLLERS");
-            case 1 -> {
-                Game.screens().display("INGAME-SCREEN");
-                PlayerManager.unFreezePlayers();
-            }
-        }
-        this.menu.setEnabled(false);
     }
 }

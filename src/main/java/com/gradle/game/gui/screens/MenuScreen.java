@@ -139,7 +139,7 @@ public class MenuScreen extends Screen {
                 GameManager.setCurrentGameType(GameType.COOP);
                 GameManager.startGame();
             }
-            case 2 -> System.exit(0);
+            case 2 -> Game.exit();
         }
     }
 

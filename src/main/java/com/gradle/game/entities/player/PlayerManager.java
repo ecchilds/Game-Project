@@ -2,6 +2,7 @@ package com.gradle.game.entities.player;
 
 import com.gradle.game.GameManager;
 import com.gradle.game.GameType;
+import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.physics.IMovementController;
 
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public final class PlayerManager {
     public static Player get(int playerNumber) {
         if(!initialized) {
             System.err.println("SEVERE ERROR: uninitialized PlayerManager accessed.");
-            System.exit(1);
+            Game.exit();
         }
 
         return players.get(playerNumber);
@@ -52,8 +53,8 @@ public final class PlayerManager {
         return null;
     }
 
-    public static void addPlayer(String spriteSheetName, boolean gamepad) {
-        Player player = new Player(spriteSheetName, currentPlayerNum);
+    public static void addPlayer(String spriteSheetName, String characterName, boolean gamepad) {
+        Player player = new Player(spriteSheetName, currentPlayerNum, characterName);
         currentPlayerNum++;
         if (gamepad) {
             player.setController(IMovementController.class, new PlayerGamepadController(player));
@@ -63,13 +64,17 @@ public final class PlayerManager {
         GameManager.spawnIn(player);
     }
 
-    public static void addPlayer(String spriteSheetName, int gamepadId) {
-        Player player = new Player(spriteSheetName, currentPlayerNum);
+    public static void addPlayer(String spriteSheetName, String characterName, int gamepadId) {
+        Player player = new Player(spriteSheetName, currentPlayerNum, characterName);
         currentPlayerNum++;
         player.setController(IMovementController.class, new PlayerGamepadController(player, gamepadId));
         player.setKeyboardControlled(false);
         players.add(player);
         GameManager.spawnIn(player);
+    }
+
+    public static void saveGames() {
+        players.forEach(Player::saveGame);
     }
 
     public static void freezePlayers() {

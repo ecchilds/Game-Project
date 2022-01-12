@@ -1,11 +1,11 @@
 package com.gradle.game.entities.player;
+import com.gradle.game.SaveGame;
 import com.gradle.game.gui.screens.PauseScreen;
 import com.gradle.game.gui.windows.CreaturesWindow;
 import com.gradle.game.gui.windows.WindowManager;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.Valign;
 import de.gurkenlabs.litiengine.entities.*;
-import de.gurkenlabs.litiengine.graphics.RenderType;
 import de.gurkenlabs.litiengine.graphics.animation.IEntityAnimationController;
 import de.gurkenlabs.litiengine.input.Gamepad;
 import de.gurkenlabs.litiengine.input.Input;
@@ -16,8 +16,10 @@ import de.gurkenlabs.litiengine.physics.IMovementController;
 @MovementInfo(velocity = 100)
 @CollisionInfo(collisionBoxWidth = 20, collisionBoxHeight = 6, collision = true, valign = Valign.DOWN)
 public class Player extends Creature {
-    public int id;
+    private int id;
     private boolean keyboard = true;
+    private String characterName;
+    private SaveGame save;
 
     private PlayerControllerManager controllers;
 
@@ -36,11 +38,13 @@ public class Player extends Creature {
 //    }
 
     protected Player(String spritesheetName) {
-        this(spritesheetName, 0);
+        this(spritesheetName, 0, "bob");
     }
-    protected Player(String spritesheetName, int id) {
+    protected Player(String spritesheetName, int id, String name) {
         super(spritesheetName);
         this.id = id;
+        this.characterName = name;
+        save = SaveGame.loadSavedGameFile(characterName);
         Game.screens().add(new PauseScreen(id));
 
         WindowManager.add(new CreaturesWindow("P"+id+"-CREATURES"));
@@ -80,6 +84,14 @@ public class Player extends Creature {
         }
         // id
         return Input.gamepads().getById(this.getController(PlayerGamepadController.class).getId());
+    }
+
+    public SaveGame getSave() {
+        return save;
+    }
+
+    public void saveGame() {
+        this.save.saveGame(this.characterName);
     }
 
     public boolean isKeyboardControlled() {
@@ -145,6 +157,10 @@ public class Player extends Creature {
     @Override
     public <T extends IEntityController> T getController(Class<T> clss) {
         return this.controllers().getController(clss);
+    }
+
+    public String getCharacterName() {
+        return characterName;
     }
 
 //    @Override
