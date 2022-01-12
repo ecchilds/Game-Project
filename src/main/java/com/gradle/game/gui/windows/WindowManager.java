@@ -9,7 +9,7 @@ public class WindowManager {
     }
 
     private static boolean initialized = false;
-    private static ConcurrentHashMap<String, Window> windows = new ConcurrentHashMap<>();
+    private static final ConcurrentHashMap<String, Window> windows = new ConcurrentHashMap<>();
 
     public static void init() {
         // do stuff here

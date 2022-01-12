@@ -24,6 +24,13 @@ public class PlayerKeyboardController extends KeyboardEntityController<Player> {
         keyListener = e -> {
             switch(e.getKeyCode()) {
                 case KeyEvent.VK_1 -> player.loadCreaturesMenu();
+
+                // window navigation
+                // TODO: raise issue over vk_kp_* codes not working.
+                case KeyEvent.VK_NUMPAD8 -> player.windowUp(); // numpad up
+                case KeyEvent.VK_NUMPAD6 -> player.windowRight(); // numpad right
+                case KeyEvent.VK_NUMPAD2 -> player.windowDown(); // numpad Down
+                case KeyEvent.VK_NUMPAD4 -> player.windowLeft(); // numpad left
             }
         };
     }

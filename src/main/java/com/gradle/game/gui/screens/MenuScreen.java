@@ -3,13 +3,16 @@ package com.gradle.game.gui.screens;
 import com.gradle.game.GameManager;
 import com.gradle.game.GameType;
 import com.gradle.game.Sounds;
+import com.gradle.game.entities.player.PlayerGamepadController;
 import com.gradle.game.gui.FontTypes;
 import de.gurkenlabs.litiengine.Game;
+import de.gurkenlabs.litiengine.IUpdateable;
 import de.gurkenlabs.litiengine.gui.GuiComponent;
 import de.gurkenlabs.litiengine.gui.GuiProperties;
 import de.gurkenlabs.litiengine.gui.ImageComponent;
 import de.gurkenlabs.litiengine.gui.Menu;
 import de.gurkenlabs.litiengine.gui.screens.Screen;
+import de.gurkenlabs.litiengine.input.Gamepad;
 import de.gurkenlabs.litiengine.input.GamepadEvents;
 import de.gurkenlabs.litiengine.input.IKeyboard;
 import de.gurkenlabs.litiengine.input.Input;
@@ -17,18 +20,18 @@ import de.gurkenlabs.litiengine.input.Input;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class MenuScreen extends Screen {
+public abstract class MenuScreen extends Screen implements IUpdateable { //TODO: move some functionality to MainMenuScreen, make abstract.
     protected Menu menu;
     protected String[] menuOptions = {"Play", "Exit"};
     protected int options;
     protected boolean mouseEnabled = true;
 
-    protected IKeyboard.KeyReleasedListener keyListener;
-    protected GamepadEvents.GamepadPollListener gamepadListener;
+    protected static final int MAX_INPUT_COOLDOWN = 11;
+    protected int inputCooldownTimer = 0;
 
-    public MenuScreen() {
-        this("MENU-MAIN");
-    }
+    protected IKeyboard.KeyReleasedListener keyListener;
+    protected GamepadEvents.GamepadReleasedListener gamepadButtonListener;
+    protected GamepadEvents.GamepadPressedListener gamepadStickListener;
 
     protected MenuScreen(String screenName) {
         super(screenName);
@@ -46,9 +49,41 @@ public class MenuScreen extends Screen {
                 menuOptionSelectWrapper();
             }
         };
+
+        gamepadStickListener = event -> { // Left stick Y
+            if (inputCooldownTimer > MAX_INPUT_COOLDOWN) {
+                if (event.getValue() < 0) {
+                    menu.setCurrentSelection(Math.max(0, menu.getCurrentSelection() - 1));
+                } else {
+                    menu.setCurrentSelection(Math.min(options, menu.getCurrentSelection() + 1));
+                }
+                for (ImageComponent comp : menu.getCellComponents()) {
+                    comp.setHovered(false);
+                }
+                menu.getCellComponents().get(menu.getCurrentSelection()).setHovered(true);
+                inputCooldownTimer = 0;
+            }
+        };
+        gamepadButtonListener = event -> {
+            switch (event.getComponentId()) {
+                case "0" -> menuOptionSelectWrapper();
+                case "1" -> Game.screens().display("INGAME-SCREEN");
+            }
+        };
+
+        Game.loop().attach(this);
     }
 
-    // taken from
+    // override to change title
+    protected abstract String getTitle();
+
+    // override to change menu items
+    protected abstract String[] getMenuOptions();
+
+    //override for inputs
+    protected abstract void menuOptionSelect();
+
+    // lots of code taken from
     // https://github.com/gurkenlabs/litiengine-ldjam46/blob/master/src/de/gurkenlabs/ldjam46/gui/MenuScreen.java
 
     // runs when menu is opened
@@ -61,9 +96,10 @@ public class MenuScreen extends Screen {
 
         initMenu();
         this.menu.getCellComponents().get(0).setSelected(true);
+        this.menu.getCellComponents().get(0).setHovered(true);
 
-        //keyboard control. must be initialized here so that it does not mess with player navigation.
-        setListeners();
+        //menu control. must be initialized here so that it does not mess with player navigation.
+        Game.loop().perform(1, ()-> setListeners());
     }
 
     // runs before constructor. Why? I don't know.
@@ -98,11 +134,19 @@ public class MenuScreen extends Screen {
     protected void setListeners() {
         //must be delayed one tick so that it doesn't run immediately, should the screen switch be
         //activated by another listener.
-        Game.loop().perform(1, ()-> Input.keyboard().onKeyReleased(keyListener));
+        Input.keyboard().onKeyReleased(keyListener);
+        Input.gamepads().getAll().forEach(gp -> {
+            gp.onPressed(Gamepad.Xbox.LEFT_STICK_Y, gamepadStickListener);
+            gp.onReleased(gamepadButtonListener);
+        });
     }
 
     protected void removeListeners() {
         Input.keyboard().removeKeyReleasedListener(keyListener);
+        Input.gamepads().getAll().forEach(gp -> {
+            gp.removePressedListener(Gamepad.Xbox.LEFT_STICK_Y, gamepadStickListener);
+            gp.removeReleasedListener(gamepadButtonListener);
+        });
     }
 
     // override to change appearances
@@ -116,37 +160,17 @@ public class MenuScreen extends Screen {
             comp.getAppearance().setBorderColor(new Color(255,255,255));
             comp.getAppearance().setBorderRadius(2);
             if (mouseEnabled) {
-                comp.onClicked(e -> {
-                    menuOptionSelectWrapper();
-                });
+                comp.onClicked(e -> menuOptionSelectWrapper());
             }
             comp.onHovered(e -> Game.audio().playSound(Sounds.MENU_HOVER));
         });
     }
 
-    protected String getTitle() {return "Gamer Zone";};
-
-    // override to change menu items
-    protected String[] getMenuOptions() {
-        return new String[]{"Start", "Co-op", "Exit"};
-    }
-
-    //override for inputs
-    protected void menuOptionSelect() {
-        switch (this.menu.getCurrentSelection()) {
-            case 0 -> GameManager.startGame();
-            case 1 -> {
-                GameManager.setCurrentGameType(GameType.COOP);
-                GameManager.startGame();
-            }
-            case 2 -> Game.exit();
-        }
-    }
-
+    // NEVER call menuOptionSelect raw, always use this. (Except for controllerscreen, that's a special case.
     protected void menuOptionSelectWrapper() {
         menuOptionSelect();
         this.menu.setEnabled(false); //disables all buttons, so they can't be entered multiple times
-        removeListeners();
+        Game.loop().perform(1, this::removeListeners);
         Game.audio().playSound(Sounds.MENU_SELECT);
     }
 
@@ -170,5 +194,10 @@ public class MenuScreen extends Screen {
     public void suspend() {
         super.suspend();
         this.removeListeners();
+    }
+
+    @Override
+    public void update() {
+        this.inputCooldownTimer++;
     }
 }

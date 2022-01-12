@@ -239,13 +239,23 @@
       <property name="spawnPivot" value="OFFSET"/>
      </properties>
     </object>
-    <object id="30" type="LIGHTSOURCE" x="88" y="26" width="299" height="291">
+    <object id="30" type="LIGHTSOURCE" x="166" y="38" width="158" height="291">
      <properties>
       <property name="lightActive" type="bool" value="true"/>
       <property name="lightColor" value="#000000"/>
       <property name="lightFocusOffsetX" value="-0.0"/>
       <property name="lightFocusOffsetY" value="-0.0"/>
       <property name="lightIntensity" value="0"/>
+      <property name="lightShape" value="ellipse"/>
+     </properties>
+    </object>
+    <object id="31" type="LIGHTSOURCE" x="98" y="171" width="96" height="192">
+     <properties>
+      <property name="lightActive" type="bool" value="true"/>
+      <property name="lightColor" value="#000000"/>
+      <property name="lightFocusOffsetX" value="0.0"/>
+      <property name="lightFocusOffsetY" value="-0.5"/>
+      <property name="lightIntensity" type="int" value="100"/>
       <property name="lightShape" value="ellipse"/>
      </properties>
     </object>

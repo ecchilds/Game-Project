@@ -105,7 +105,7 @@ public final class GameManager {
                     public void released(GamepadEvent event) {
                         Game.screens().get("INGAME-SCREEN").getComponents().remove(prompt);
                         PlayerManager.addPlayer("hoodie", "steve", event.getGamepad().getId());
-                        gamepad.removeReleasedListener(Gamepad.Xbox.START, this);
+                        Game.loop().perform(1, () -> gamepad.removeReleasedListener(Gamepad.Xbox.START, this));
 
                         prompt = null;
                         start = null;
@@ -135,6 +135,7 @@ public final class GameManager {
             PlayerManager.slowPlayers(2);
             spawn(PlayerManager.getCurrent().getSave().getMap(), "enter",1000);
         });
+        //Game.loop().perform(500, () -> Game.audio().playMusic("211776__klankbeeld__piezo-cracking-oak-tree-131223-00.wav"));
     }
 
     public static String getRoomName() {

@@ -1,6 +1,7 @@
 package com.gradle.game;
 import com.gradle.game.gui.screens.ControllerScreen;
 import com.gradle.game.gui.screens.IngameScreen;
+import com.gradle.game.gui.screens.MainMenuScreen;
 import com.gradle.game.gui.screens.MenuScreen;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.resources.Resources;
@@ -26,7 +27,7 @@ public class GameApp {
         // add menu screen first, so it can display first. If that doesn't work,
         // add Game.screens().display("MENU");
         Game.screens().setChangeCooldown(200);
-        Game.screens().add(new MenuScreen());
+        Game.screens().add(new MainMenuScreen());
         Game.screens().add(new IngameScreen());
         Game.screens().add(new ControllerScreen());
 

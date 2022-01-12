@@ -6,8 +6,6 @@ import de.gurkenlabs.litiengine.gui.Appearance;
 import de.gurkenlabs.litiengine.gui.GuiComponent;
 import de.gurkenlabs.litiengine.tweening.TweenType;
 
-import de.gurkenlabs.litiengine.entities.LightSource;
-
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.font.FontRenderContext;
@@ -25,6 +23,9 @@ public abstract class Window extends GuiComponent {
     // Component variables
     protected GuiComponent header;
     protected GuiComponent body;
+    protected GuiComponent title;
+    protected GuiComponent xButton;
+
     private double headerPercentageX;
     private double headerPercentageY;
 
@@ -57,9 +58,6 @@ public abstract class Window extends GuiComponent {
         // Bar containing window name and "X" button.
         header = new GuiComponent(this.getX(), this.getY(), this.getWidth(), HEADER_HEIGHT) {
 
-            GuiComponent title;
-            GuiComponent xButton;
-
             @Override
             protected void initializeComponents() {
                 super.initializeComponents();
@@ -74,7 +72,7 @@ public abstract class Window extends GuiComponent {
                 //TODO: fill with ":" symbols.
 
                 Double titleWidth = FONT.getStringBounds(getTitle(), new FontRenderContext(new AffineTransform(), false, true)).getWidth();
-                this.title = new GuiComponent(this.getX(), this.getY(), titleWidth+(HEADER_OFFSET*2), HEADER_HEIGHT) {
+                title = new GuiComponent(this.getX(), this.getY(), titleWidth+(HEADER_OFFSET*2), HEADER_HEIGHT) {
                     @Override
                     protected void initializeComponents() {
                         super.initializeComponents();
@@ -88,7 +86,7 @@ public abstract class Window extends GuiComponent {
 
                 Double end = this.getX() + this.getWidth();
                 Double xWidth = FONT.getStringBounds("X", new FontRenderContext(new AffineTransform(), false, true)).getWidth();
-                this.xButton = new GuiComponent(end-(xWidth+(HEADER_OFFSET*2)), this.getY(), xWidth+(HEADER_OFFSET*2), HEADER_HEIGHT) {
+                xButton = new GuiComponent(end-(xWidth+(HEADER_OFFSET*2)), this.getY(), xWidth+(HEADER_OFFSET*2), HEADER_HEIGHT) {
                     @Override
                     protected void initializeComponents() {
                         super.initializeComponents();
@@ -138,6 +136,12 @@ public abstract class Window extends GuiComponent {
     protected abstract GuiComponent buildBody(double x, double y, double width, double height);
 
     protected abstract String getTitle();
+
+    // controller inputs
+    public abstract void up();
+    public abstract void right();
+    public abstract void down();
+    public abstract void left();
 
     // bug fix stuff
     @Override

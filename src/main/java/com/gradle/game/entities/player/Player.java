@@ -2,26 +2,36 @@ package com.gradle.game.entities.player;
 import com.gradle.game.SaveGame;
 import com.gradle.game.gui.screens.PauseScreen;
 import com.gradle.game.gui.windows.CreaturesWindow;
+import com.gradle.game.gui.windows.Window;
 import com.gradle.game.gui.windows.WindowManager;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.Valign;
 import de.gurkenlabs.litiengine.entities.*;
 import de.gurkenlabs.litiengine.graphics.animation.IEntityAnimationController;
 import de.gurkenlabs.litiengine.input.Gamepad;
+import de.gurkenlabs.litiengine.input.GamepadEvents;
+import de.gurkenlabs.litiengine.input.IKeyboard;
 import de.gurkenlabs.litiengine.input.Input;
 import de.gurkenlabs.litiengine.physics.IMovementController;
+
+import java.util.ArrayDeque;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 
 @EntityInfo(width = 32, height = 32)
 @MovementInfo(velocity = 100)
 @CollisionInfo(collisionBoxWidth = 20, collisionBoxHeight = 6, collision = true, valign = Valign.DOWN)
 public class Player extends Creature {
-    private int id;
+    private final int id;
+    private final String characterName;
+    private final SaveGame save;
     private boolean keyboard = true;
-    private String characterName;
-    private SaveGame save;
 
+    private ArrayDeque<Window> activeWindows; // NOTE: if this produce concurrency errors, replace with a ConcurrentLinkedDeque.
     private PlayerControllerManager controllers;
+
+//    private IKeyboard.KeyTypedListener keyboardWindowListener;
+//    private GamepadEvents.GamepadPressedListener gamepadWindowListener;
 
     @Deprecated
     public static Player instance() throws Exception {
@@ -44,7 +54,8 @@ public class Player extends Creature {
         super(spritesheetName);
         this.id = id;
         this.characterName = name;
-        save = SaveGame.loadSavedGameFile(characterName);
+        this.activeWindows = new ArrayDeque<>();
+        this.save = SaveGame.loadSavedGameFile(characterName);
         Game.screens().add(new PauseScreen(id));
 
         WindowManager.add(new CreaturesWindow("P"+id+"-CREATURES"));
@@ -62,21 +73,50 @@ public class Player extends Creature {
         return new PlayerKeyboardController(this);
     }
 
+    // ========================================================================================================================
+    // Controller interaction functions
+
     public void loadPauseMenu() {
         if(Game.screens().current().getName().equals("INGAME-SCREEN")) {
             Game.screens().display("MENU-P" + id + "PAUSE");
             PlayerManager.freezePlayers();
         } else {
             Game.screens().display("INGAME-SCREEN");
-            PlayerManager.unFreezePlayers();
         }
     }
 
     public void loadCreaturesMenu() {
         if(Game.screens().current().getName().equals("INGAME-SCREEN")) {
-            WindowManager.toggleDisplay("P"+id+"-CREATURES");
+            Window window = WindowManager.get("P"+id+"-CREATURES");
+            window.toggleSuspension();
+            if (window.isSuspended()) {
+                activeWindows.remove(window);
+            } else {
+                activeWindows.push(window);
+            }
         }
     }
+
+    // Window navigation functions
+    public void windowUp() {
+        if(!activeWindows.isEmpty())
+            this.activeWindows.peek().up();
+    }
+    public void windowRight() {
+        if(!activeWindows.isEmpty())
+            this.activeWindows.peek().right();
+    }
+    public void windowDown() {
+        if(!activeWindows.isEmpty())
+            this.activeWindows.peek().down();
+    }
+    public void windowLeft() {
+        if(!activeWindows.isEmpty())
+            this.activeWindows.peek().left();
+    }
+
+    // ========================================================================================================================
+    // Getter/setter functions
 
     public Gamepad getGamepad() {
         if (keyboard) {
@@ -84,6 +124,10 @@ public class Player extends Creature {
         }
         // id
         return Input.gamepads().getById(this.getController(PlayerGamepadController.class).getId());
+    }
+
+    public String getCharacterName() {
+        return characterName;
     }
 
     public SaveGame getSave() {
@@ -157,10 +201,6 @@ public class Player extends Creature {
     @Override
     public <T extends IEntityController> T getController(Class<T> clss) {
         return this.controllers().getController(clss);
-    }
-
-    public String getCharacterName() {
-        return characterName;
     }
 
 //    @Override

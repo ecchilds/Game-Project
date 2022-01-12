@@ -41,6 +41,26 @@ public class CreaturesWindow extends Window {
     }
 
     @Override
+    public void up() {
+        System.out.println("up");
+    }
+
+    @Override
+    public void right() {
+
+    }
+
+    @Override
+    public void down() {
+        System.out.println("down");
+    }
+
+    @Override
+    public void left() {
+
+    }
+
+    @Override
     public void prepare() {
         super.prepare();
 

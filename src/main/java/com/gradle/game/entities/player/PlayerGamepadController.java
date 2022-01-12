@@ -11,10 +11,16 @@ import java.awt.geom.Point2D;
 
 public class PlayerGamepadController extends MovementController<Player> {
     private final boolean rotateWithRightStick;
-    private int gamepadId;
     private final double gamepadDeadzone = Game.config().input().getGamepadStickDeadzone();
     private final double gamepadRightStick = Game.config().input().getGamepadStickDeadzone();
+    private int gamepadId;
+
+    public static final int MAX_INPUT_COOLDOWN = 4;
+    private int inputCooldownTimer = MAX_INPUT_COOLDOWN;
+
     private final GamepadEvents.GamepadReleasedListener buttonListener;
+    private final GamepadEvents.GamepadPressedListener rStickXListener;
+    private final GamepadEvents.GamepadPressedListener rStickYListener;
 
     public PlayerGamepadController(Player player) {
         this(player, Input.gamepads().current().getId());
@@ -55,6 +61,28 @@ public class PlayerGamepadController extends MovementController<Player> {
             }
         };
 
+        // right stick listeners
+        this.rStickXListener = e -> {
+            if (inputCooldownTimer > MAX_INPUT_COOLDOWN) {
+                if (e.getValue() < 0) {
+                    player.windowLeft();
+                } else {
+                    player.windowRight();
+                }
+                inputCooldownTimer = 0;
+            }
+        };
+        this.rStickYListener = e -> {
+            if (inputCooldownTimer > MAX_INPUT_COOLDOWN) {
+                if (e.getValue() < 0) {
+                    player.windowUp();
+                } else {
+                    player.windowDown();
+                }
+                inputCooldownTimer = 0;
+            }
+        };
+
         Input.gamepads().onRemoved(pad -> {
             if (this.gamepadId == pad.getId()) {
                 this.gamepadId = -1;
@@ -66,8 +94,13 @@ public class PlayerGamepadController extends MovementController<Player> {
         });
     }
 
+    public int getInputCooldownTimer() {
+        return inputCooldownTimer;
+    }
+
     @Override
     public void update() {
+        inputCooldownTimer++;
         this.retrieveGamepadValues();
         super.update();
     }
@@ -121,9 +154,12 @@ public class PlayerGamepadController extends MovementController<Player> {
     @Override
     public void attach() {
         super.attach();
-        if(gamepadId != -1)
-            Input.gamepads().getById(this.gamepadId).onReleased(this.buttonListener);
-        else
+        if(gamepadId != -1) {
+            Gamepad gamepad = Input.gamepads().getById(this.gamepadId);
+            gamepad.onReleased(this.buttonListener);
+            gamepad.onPressed(Gamepad.Xbox.RIGHT_STICK_X, rStickXListener);
+            gamepad.onPressed(Gamepad.Xbox.RIGHT_STICK_Y, rStickYListener);
+        } else
             System.out.println("WARNING: attached gamepad does not have listeners");
     }
 
@@ -132,9 +168,12 @@ public class PlayerGamepadController extends MovementController<Player> {
         super.detach();
         Gamepad gamepad = Input.gamepads().getById(this.gamepadId);
         if (gamepad == null) {
+            System.err.println("ERROR: gamepad null on detachment.");
             System.out.println(this.gamepadId);
             Input.gamepads().getAll().forEach(gp -> System.out.println(gp.getId()));
         }
         gamepad.removeReleasedListener(this.buttonListener);
+        gamepad.removePressedListener(Gamepad.Xbox.RIGHT_STICK_X, rStickXListener);
+        gamepad.removePressedListener(Gamepad.Xbox.RIGHT_STICK_Y, rStickYListener);
     }
 }

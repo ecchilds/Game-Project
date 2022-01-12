@@ -130,6 +130,16 @@ public class ControllerScreen extends MenuScreen {
     }
 
     @Override
+    protected String getTitle() {
+        return null;
+    }
+
+    @Override
+    protected String[] getMenuOptions() {
+        return null;
+    }
+
+    @Override
     protected void menuOptionSelect() {
 
         // mostly just used to clean up after listener procs
@@ -156,7 +166,6 @@ public class ControllerScreen extends MenuScreen {
         } else {
             this.menu.setEnabled(false);
             Game.screens().display("INGAME-SCREEN");
-            PlayerManager.unFreezePlayers();
 
             this.removeListeners();
 
