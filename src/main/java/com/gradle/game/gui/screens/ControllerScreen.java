@@ -149,7 +149,7 @@ public class ControllerScreen extends MenuScreen {
 //            PlayerManager.get(current).setKeyboardControlled(false);
 //        }
 
-        if (this.currentPlayer < this.instances-1) {
+        if (this.currentPlayer < this.instances-1 && this.currentPlayer < this.options-1) {
             //set up next screen
             this.currentPlayer++;
             this.playerLabel.setText("Player " + (currentPlayer +1));

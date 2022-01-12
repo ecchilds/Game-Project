@@ -121,12 +121,8 @@ public final class GameManager {
                 Player player = PlayerManager.getByGamepadId(gamepad.getId());
                 if (player != null) {
                     player.removeController(IMovementController.class);
-                } else if (prompt != null) {
-                    Game.screens().get("INGAME-SCREEN").getComponents().remove(prompt);
-                    gamepad.removeReleasedListener(Gamepad.Xbox.START, start);
-                    prompt = null;
-                    start = null;
                 }
+                Game.screens().display("MENU-CONTROLLERS");
 
             } else { // single player
                 PlayerManager.getCurrent().removeController(PlayerGamepadController.class);
