@@ -1,9 +1,6 @@
 package com.gradle.game.gui.screens;
 
-import com.gradle.game.GameManager;
-import com.gradle.game.GameType;
 import com.gradle.game.Sounds;
-import com.gradle.game.entities.player.PlayerGamepadController;
 import com.gradle.game.gui.FontTypes;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.IUpdateable;
@@ -20,13 +17,13 @@ import de.gurkenlabs.litiengine.input.Input;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public abstract class MenuScreen extends Screen implements IUpdateable { //TODO: move some functionality to MainMenuScreen, make abstract.
+public abstract class MenuScreen extends Screen implements IUpdateable {
     protected Menu menu;
     protected String[] menuOptions = {"Play", "Exit"};
     protected int options;
     protected boolean mouseEnabled = true;
 
-    protected static final int MAX_INPUT_COOLDOWN = 11;
+    protected static final int INPUT_COOLDOWN = 11;
     protected int inputCooldownTimer = 0;
 
     protected IKeyboard.KeyReleasedListener keyListener;
@@ -51,7 +48,7 @@ public abstract class MenuScreen extends Screen implements IUpdateable { //TODO:
         };
 
         gamepadStickListener = event -> { // Left stick Y
-            if (inputCooldownTimer > MAX_INPUT_COOLDOWN) {
+            if (inputCooldownTimer > INPUT_COOLDOWN) {
                 if (event.getValue() < 0) {
                     menu.setCurrentSelection(Math.max(0, menu.getCurrentSelection() - 1));
                 } else {
@@ -99,7 +96,7 @@ public abstract class MenuScreen extends Screen implements IUpdateable { //TODO:
         this.menu.getCellComponents().get(0).setHovered(true);
 
         //menu control. must be initialized here so that it does not mess with player navigation.
-        Game.loop().perform(1, ()-> setListeners());
+        Game.loop().perform(1, this::setListeners);
     }
 
     // runs before constructor. Why? I don't know.

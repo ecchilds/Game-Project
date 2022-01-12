@@ -110,15 +110,13 @@ public class ControllerScreen extends MenuScreen {
     @Override
     protected void initializeComponents() {
         // Parent's version is bad for this, while parent's parent's is empty.
-        // Thus, not calling super causes no ill effects.
-        //super.initializeComponents();
+        // Thus, leaving this empty causes no ill effects.
     }
 
     @Override
     protected void setListeners() {
         Game.loop().perform(100, () -> {
             Input.keyboard().onKeyReleased(keyListener);
-            //has to be done manually
             Input.gamepads().getAll().forEach(controller -> controller.onReleased(gamepadReleasedListener));
         });
     }
@@ -142,22 +140,7 @@ public class ControllerScreen extends MenuScreen {
     @Override
     protected void menuOptionSelect() {
 
-        // mostly just used to clean up after listener procs
-
-//        int selection = this.menu.getCurrentSelection();
-//        if(selection == 0) {
-//            PlayerManager.get(current).setController(
-//                    MovementController.class,
-//                    new PlayerKeyboardController(PlayerManager.get(current))
-//            );
-//            PlayerManager.get(current).setKeyboardControlled(true);
-//        } else {
-//            PlayerManager.get(current).setController(
-//                    MovementController.class,
-//                    new PlayerGamepadController(PlayerManager.get(current), Input.gamepads().get(selection-1).getId())
-//            );
-//            PlayerManager.get(current).setKeyboardControlled(false);
-//        }
+        // this is mostly just used to clean up after listener procs
 
         if (this.currentPlayer < this.instances-1 && this.currentPlayer < this.options-1) {
             //set up next screen
@@ -179,18 +162,7 @@ public class ControllerScreen extends MenuScreen {
         this.menu.getCellComponents().forEach(comp -> {
             comp.setFont(FontTypes.MENU);
             comp.getAppearance().setForeColor(new Color(255,255,255));
-//            comp.onClicked(e -> {
-//                menuOptionSelect();
-//            });
             comp.setForwardMouseEvents(false);
         });
     }
-
-//    public String getPreviousScreen() {
-//        return previousScreenName;
-//    }
-
-//    public static void setPreviousScreen(String screenName) {
-//        previousScreenName = screenName;
-//    }
 }
