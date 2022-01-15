@@ -15,8 +15,8 @@ public class PlayerGamepadController extends MovementController<Player> {
     private final double gamepadRightStick = Game.config().input().getGamepadStickDeadzone();
     private int gamepadId;
 
-    public static final int MAX_INPUT_COOLDOWN = 4;
-    private int inputCooldownTimer = MAX_INPUT_COOLDOWN;
+    public static final int INPUT_COOLDOWN = 4;
+    private int inputCooldownTimer = INPUT_COOLDOWN; // TODO: consider moving this to Game.loop.perform(delay) function on boolean variable
 
     private final GamepadEvents.GamepadReleasedListener buttonListener;
     private final GamepadEvents.GamepadPressedListener rStickXListener;
@@ -35,8 +35,6 @@ public class PlayerGamepadController extends MovementController<Player> {
         super(player);
         this.gamepadId = gamepadId;
         this.rotateWithRightStick = rotateWithRightStick;
-
-        Gamepad gamepad = Input.gamepads().getById(gamepadId);
 
         // Button inputs here
         this.buttonListener = e -> {
@@ -57,13 +55,14 @@ public class PlayerGamepadController extends MovementController<Player> {
 //
 //                    }
                 }
+                case "0" -> player.enterButton();
                 case "7" -> player.loadPauseMenu(); // pause button
             }
         };
 
         // right stick listeners
         this.rStickXListener = e -> {
-            if (inputCooldownTimer > MAX_INPUT_COOLDOWN) {
+            if (inputCooldownTimer > INPUT_COOLDOWN) {
                 if (e.getValue() < 0) {
                     player.windowLeft();
                 } else {
@@ -73,7 +72,7 @@ public class PlayerGamepadController extends MovementController<Player> {
             }
         };
         this.rStickYListener = e -> {
-            if (inputCooldownTimer > MAX_INPUT_COOLDOWN) {
+            if (inputCooldownTimer > INPUT_COOLDOWN) {
                 if (e.getValue() < 0) {
                     player.windowUp();
                 } else {

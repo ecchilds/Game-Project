@@ -97,6 +97,11 @@ public class Player extends Creature {
         }
     }
 
+    public void enterButton() {
+        if(!activeWindows.isEmpty())
+            this.activeWindows.peek().enter();
+    }
+
     // Window navigation functions
     public void windowUp() {
         if(!activeWindows.isEmpty())
@@ -124,6 +129,10 @@ public class Player extends Creature {
         }
         // id
         return Input.gamepads().getById(this.getController(PlayerGamepadController.class).getId());
+    }
+
+    public int getId() {
+        return this.id;
     }
 
     public String getCharacterName() {

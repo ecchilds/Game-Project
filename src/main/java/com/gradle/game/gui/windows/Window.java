@@ -142,6 +142,7 @@ public abstract class Window extends GuiComponent {
     public abstract void right();
     public abstract void down();
     public abstract void left();
+    public abstract void enter();
 
     // bug fix stuff
     @Override

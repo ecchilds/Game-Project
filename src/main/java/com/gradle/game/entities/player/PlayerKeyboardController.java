@@ -1,6 +1,5 @@
 package com.gradle.game.entities.player;
 
-import com.gradle.game.entities.player.Player;
 import de.gurkenlabs.litiengine.input.IKeyboard;
 import de.gurkenlabs.litiengine.input.Input;
 import de.gurkenlabs.litiengine.input.KeyboardEntityController;
@@ -31,6 +30,9 @@ public class PlayerKeyboardController extends KeyboardEntityController<Player> {
                 case KeyEvent.VK_NUMPAD6 -> player.windowRight(); // numpad right
                 case KeyEvent.VK_NUMPAD2 -> player.windowDown(); // numpad Down
                 case KeyEvent.VK_NUMPAD4 -> player.windowLeft(); // numpad left
+
+                case KeyEvent.VK_ENTER -> player.enterButton();
+                case KeyEvent.VK_SPACE -> player.enterButton();
             }
         };
     }

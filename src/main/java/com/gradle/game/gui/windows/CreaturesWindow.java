@@ -1,14 +1,19 @@
 package com.gradle.game.gui.windows;
 
 
+import com.gradle.game.Sounds;
 import com.gradle.game.gui.FontTypes;
+import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.gui.Appearance;
 import de.gurkenlabs.litiengine.gui.GuiComponent;
+import de.gurkenlabs.litiengine.gui.ImageComponent;
 import de.gurkenlabs.litiengine.gui.Menu;
 
 import java.awt.*;
 
 public class CreaturesWindow extends Window {
+
+    private static final int OPTIONS = 4;
 
     private Menu menu;
 
@@ -40,24 +45,34 @@ public class CreaturesWindow extends Window {
         return "Creatures";
     }
 
+    //input functions
     @Override
     public void up() {
-        System.out.println("up");
+        this.menu.setCurrentSelection(Math.max(0, this.menu.getCurrentSelection() - 1));
+        afterMove();
     }
-
     @Override
     public void right() {
-
     }
-
     @Override
     public void down() {
-        System.out.println("down");
+        this.menu.setCurrentSelection(Math.min(this.OPTIONS, this.menu.getCurrentSelection() + 1));
+        afterMove();
     }
-
     @Override
     public void left() {
+    }
+    @Override
+    public void enter() {
+        Game.audio().playSound(Sounds.MENU_SELECT);
+    }
 
+    private void afterMove() {
+        for (ImageComponent comp : this.menu.getCellComponents()) {
+            comp.setHovered(false);
+        }
+        this.menu.getCellComponents().get(this.menu.getCurrentSelection()).setHovered(true);
+        Game.audio().playSound(Sounds.MENU_HOVER);
     }
 
     @Override
@@ -68,5 +83,8 @@ public class CreaturesWindow extends Window {
             comp.setFont(FontTypes.GEN);
             comp.getAppearance().setForeColor(Color.WHITE);
         });
+
+        this.menu.getCellComponents().get(0).setSelected(true);
+        this.menu.getCellComponents().get(0).setHovered(true);
     }
 }

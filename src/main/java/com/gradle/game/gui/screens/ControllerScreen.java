@@ -1,6 +1,7 @@
 package com.gradle.game.gui.screens;
 
 
+import com.gradle.game.Sounds;
 import com.gradle.game.entities.player.PlayerGamepadController;
 import com.gradle.game.entities.player.PlayerKeyboardController;
 import com.gradle.game.entities.player.PlayerManager;
@@ -141,6 +142,7 @@ public class ControllerScreen extends MenuScreen {
     protected void menuOptionSelect() {
 
         // this is mostly just used to clean up after listener procs
+        Game.audio().playSound(Sounds.MENU_SELECT);
 
         if (this.currentPlayer < this.instances-1 && this.currentPlayer < this.options-1) {
             //set up next screen

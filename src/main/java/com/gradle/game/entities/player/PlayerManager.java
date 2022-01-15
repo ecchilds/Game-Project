@@ -1,7 +1,6 @@
 package com.gradle.game.entities.player;
 
 import com.gradle.game.GameManager;
-import com.gradle.game.GameType;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.physics.IMovementController;
 
@@ -18,7 +17,6 @@ public final class PlayerManager {
     private static boolean initialized = false;
 
     public static void init() {
-        GameType gameType = GameManager.getCurrentGameType();
         currentPlayerNum = 1;
         players.add(new Player("hoodie"));
 
@@ -43,8 +41,7 @@ public final class PlayerManager {
     }
 
     public static Player getByGamepadId(int id) {
-        for (int i = 0; i < players.size(); i++) {
-            Player player = players.get(i);
+        for (Player player : players) {
             if (!player.isKeyboardControlled() && player.getGamepad().getId() == id) {
                 return player;
             }
