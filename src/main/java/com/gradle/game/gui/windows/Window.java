@@ -103,8 +103,8 @@ public abstract class Window extends GuiComponent {
         };
 
         // Ensure that menu closes when "x" button is clicked.
-        header.getComponents().get(1).onClicked(e -> {
-            this.suspend();
+        xButton.onClicked(e -> {
+            onXPress();
         });
 
         // Allow window to be moved.
@@ -143,6 +143,11 @@ public abstract class Window extends GuiComponent {
     public abstract void down();
     public abstract void left();
     public abstract void enter();
+
+    // runs after suspension
+    protected void onXPress() {
+        this.suspend();
+    }
 
     // bug fix stuff
     @Override

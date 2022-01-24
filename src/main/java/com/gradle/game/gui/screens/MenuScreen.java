@@ -179,6 +179,9 @@ public abstract class MenuScreen extends Screen implements IUpdateable {
             } else {
                 this.menu.setCurrentSelection(Math.max(0, this.menu.getCurrentSelection() - 1));
             }
+            //TODO: implement custom menu to handle select/hover as one?
+            // can be done in menu's "setCurrentSelection" function, which
+            // already has a loop to deselect.
             for (ImageComponent comp : this.menu.getCellComponents()) {
                 comp.setHovered(false);
             }

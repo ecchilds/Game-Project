@@ -1,6 +1,8 @@
 package com.gradle.game;
 
 import com.gradle.game.entities.*;
+import com.gradle.game.entities.mobs.EyeballMob;
+import com.gradle.game.entities.mobs.Mob;
 import com.gradle.game.entities.player.Player;
 import com.gradle.game.entities.player.PlayerGamepadController;
 import com.gradle.game.entities.player.PlayerManager;
@@ -28,9 +30,15 @@ public final class GameManager {
 
     private static GameType currentGameType = GameType.SINGLEPLAYER;
 
-    //variables for adding new players via gamepad prompts
+    // variables for adding new players via gamepad prompts
     private static GuiComponent prompt = null;
     private static GamepadEvents.GamepadReleasedListener start = null;
+
+    // mob spawn flags
+//    private
+//    static {
+//
+//    }
 
     public static void init() {
 
@@ -155,13 +163,13 @@ public final class GameManager {
         spawn(mapName, spawnpointName, 500);
     }
     public static void spawn(String mapName, String spawnpointName, int fade ) {
-        //fade in regardless for easy debugging
+        // fade in regardless for easy debugging
         Environment e = Game.world().loadEnvironment(mapName);
         //e.addAmbientLight
         Game.window().getRenderComponent().fadeIn(fade);
 
+        // spawn in player
         Spawnpoint enter = e.getSpawnpoint(spawnpointName);
-        //System.out.println(enter.getSpawnPivotType());
         if (enter != null) {
             for (int i = 0; i < PlayerManager.size(); i++) {
                 enter.setSpawnOffsetY(7f*(float)i*Math.pow(-1,i));
@@ -171,9 +179,26 @@ public final class GameManager {
         } else {
             System.err.println("ERROR: no such spawnpoint: " + spawnpointName);
         }
+
+        // spawn in mobs
+        for (Spawnpoint spawnpoint : e.getSpawnpoints("mob")) {
+            spawnpoint.spawn(createMob(spawnpoint.getName()));
+        }
     }
 
     public static void spawnIn(Player player) {
         Game.world().environment().getSpawnpoint("enter").spawn(player);
+    }
+
+    private static Mob createMob(String name) {
+        Mob mob;
+        switch (name) {
+            case "eye" -> mob = new EyeballMob();
+            default -> {
+                System.out.println("WARNING: name of mob to create was invalid");
+                mob = null;
+            }
+        }
+        return mob;
     }
 }

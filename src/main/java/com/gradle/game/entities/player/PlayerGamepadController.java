@@ -93,9 +93,9 @@ public class PlayerGamepadController extends MovementController<Player> {
         });
     }
 
-    public int getInputCooldownTimer() {
-        return inputCooldownTimer;
-    }
+//    public int getInputCooldownTimer() {
+//        return inputCooldownTimer;
+//    }
 
     @Override
     public void update() {

@@ -9,13 +9,10 @@ import de.gurkenlabs.litiengine.Valign;
 import de.gurkenlabs.litiengine.entities.*;
 import de.gurkenlabs.litiengine.graphics.animation.IEntityAnimationController;
 import de.gurkenlabs.litiengine.input.Gamepad;
-import de.gurkenlabs.litiengine.input.GamepadEvents;
-import de.gurkenlabs.litiengine.input.IKeyboard;
 import de.gurkenlabs.litiengine.input.Input;
 import de.gurkenlabs.litiengine.physics.IMovementController;
 
 import java.util.ArrayDeque;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 
 @EntityInfo(width = 32, height = 32)
@@ -27,7 +24,7 @@ public class Player extends Creature {
     private final SaveGame save;
     private boolean keyboard = true;
 
-    private ArrayDeque<Window> activeWindows; // NOTE: if this produce concurrency errors, replace with a ConcurrentLinkedDeque.
+    private final ArrayDeque<Window> activeWindows; // NOTE: if this produce concurrency errors, replace with a ConcurrentLinkedDeque.
     private PlayerControllerManager controllers;
 
 //    private IKeyboard.KeyTypedListener keyboardWindowListener;
@@ -43,10 +40,6 @@ public class Player extends Creature {
         //return instance;
     }
 
-//    protected Player() {
-//        this("hoodie");
-//    }
-
     protected Player(String spritesheetName) {
         this(spritesheetName, 0, "bob");
     }
@@ -60,11 +53,6 @@ public class Player extends Creature {
 
         WindowManager.add(new CreaturesWindow("P"+id+"-CREATURES"));
     }
-
-//    @Override
-//    public String getSpritesheetName() {
-//        return "hoodie";
-//    }
 
     @Override
     protected IMovementController createMovementController() {
@@ -95,6 +83,13 @@ public class Player extends Creature {
                 activeWindows.push(window);
             }
         }
+    }
+
+    // adds a window that is destroyed upon closing
+    public <T extends Window> void addWindow(T window) {
+        Game.screens().get("INGAME-SCREEN").getComponents().add(window);
+        window.prepare();
+        activeWindows.push(window);
     }
 
     public void enterButton() {

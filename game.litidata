@@ -21,6 +21,7 @@
      <properties>
       <property name="spawnPivot" value="COLLISIONBOX_CENTER"/>
       <property name="spawnPivotOffsetX" value="0.0"/>
+      <property name="tags" value="player"/>
      </properties>
     </object>
     <object id="2" type="COLLISIONBOX" x="128" y="352" width="128" height="32">
@@ -83,7 +84,7 @@
       <property name="isObstructingLight" type="bool" value="false"/>
      </properties>
     </object>
-    <object id="14" type="COLLISIONBOX" x="261" y="160" width="27" height="64">
+    <object id="14" type="COLLISIONBOX" x="261" y="160" width="27" height="82">
      <properties>
       <property name="collisionType" value="STATIC"/>
      </properties>
@@ -237,6 +238,7 @@
     <object id="28" name="mansion2-door" type="SPAWNPOINT" x="321" y="263" width="32" height="32">
      <properties>
       <property name="spawnPivot" value="OFFSET"/>
+      <property name="tags" value="player"/>
      </properties>
     </object>
     <object id="30" type="LIGHTSOURCE" x="166" y="38" width="158" height="291">
@@ -307,6 +309,7 @@
      <properties>
       <property name="spawnDirection" value="RIGHT"/>
       <property name="spawnPivot" value="OFFSET"/>
+      <property name="tags" value="player"/>
      </properties>
     </object>
     <object id="1" type="PROP" x="32" y="128" width="96" height="96">
@@ -352,11 +355,23 @@
       <property name="spritesheetName" value="door"/>
      </properties>
     </object>
-    <object id="12" name="enter" type="SPAWNPOINT" x="192" y="160" width="32" height="32"/>
+    <object id="12" name="enter" type="SPAWNPOINT" x="148" y="132" width="32" height="32">
+     <properties>
+      <property name="tags" value="player"/>
+     </properties>
+    </object>
+    <object id="13" name="eye" type="SPAWNPOINT" x="208" y="208" width="32" height="32">
+     <properties>
+      <property name="tags" value="mob"/>
+     </properties>
+    </object>
    </objectgroup>
   </map>
  </maps>
  <spriteSheets>
+  <sprite width="32" height="32" imageformat="PNG" name="eyeball-idle-down">
+   <image>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAu0lEQVR4Xu2Syw2AIBAFacGDV2u0DjuwBmvyZCEq0UV8oPJz/YRJNgqBnQdBiEwmk/kSVVmMLoX7oqHGYz8s1XbbP43rRo2TBjkTG8H0mgNFh1DN4YS63AhBIddvUAjVVEpJbLl2Qy7XynUHN4WeS3YnpCAkgTC78Xr9wWJEb+ZT2CcKbH5VuD8ZKEHxrXLCJrLN3QabyIfHQ7EGYJUhrK/9iFcEcJn7L/o7sBWuTwaKzgr3JgNFLNJfMwGDoWdbPAn3wgAAAABJRU5ErkJggg==</image>
+  </sprite>
   <sprite width="32" height="32" imageformat="PNG" name="hoodie-idle-down">
    <image>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDUlEQVR4Xu2UUQqDMBBEc4Ui/e0NcoHewHPkmp6rv9YVBsYhKTXZhBYcGIxRd95uSkO49M963G+rWfeHCOEppbEQGmxXrIeAcKi6O4CG631XiFKY7nWDyJ23uhsAiiNoDa+sGcQVgotqqNod4Ex4F4hagHme/QDOhDNEM0BN9wzQPIWfAKiBsHdjjH7HYJ2gG4Rsjw7WcAAcq1UKncDaMYeztU6VrNCnv9+S3SbAAHYMGO/2KLtGsAsAwgGAtXlZlh2I1/xbAWwThIaaEZpb8z32mgBMGCcX1vOG+Z3m7lkYJwpzkIbiat9onSahQ+2UjWm5da7SkZes37nJik/PaTcHlfa7KNdpbu/St3oD0KesFaiSnXgAAAAASUVORK5CYII=</image>
   </sprite>
