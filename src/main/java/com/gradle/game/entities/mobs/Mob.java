@@ -6,6 +6,7 @@ import de.gurkenlabs.litiengine.Direction;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.IUpdateable;
 import de.gurkenlabs.litiengine.entities.Creature;
+import de.gurkenlabs.litiengine.physics.IMovementController;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -86,5 +87,10 @@ public abstract class Mob extends Creature implements IUpdateable {
         }
 
         super.setFacingDirection(facingDirection);
+    }
+
+    @Override
+    protected IMovementController createMovementController() {
+        return new MobController(this);
     }
 }

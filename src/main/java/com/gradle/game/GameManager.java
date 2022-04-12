@@ -183,6 +183,7 @@ public final class GameManager {
         // spawn in mobs
         for (Spawnpoint spawnpoint : e.getSpawnpoints("mob")) {
             spawnpoint.spawn(createMob(spawnpoint.getName()));
+            spawnpoint.removeTag("mob");
         }
     }
 
