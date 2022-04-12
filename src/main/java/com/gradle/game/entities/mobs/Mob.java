@@ -6,10 +6,12 @@ import de.gurkenlabs.litiengine.Direction;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.IUpdateable;
 import de.gurkenlabs.litiengine.entities.Creature;
+import de.gurkenlabs.litiengine.entities.ICollisionEntity;
 import de.gurkenlabs.litiengine.physics.IMovementController;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.util.Optional;
 import java.util.Random;
 
 public abstract class Mob extends Creature implements IUpdateable {
@@ -27,6 +29,12 @@ public abstract class Mob extends Creature implements IUpdateable {
         this.onCollision(e -> {
             if(e.getSource().getClass() == Player.class) {
                 this.handleCollision((Player)e.getSource());
+            } else {
+                Optional<ICollisionEntity> tmp = e.getInvolvedEntities().stream().filter(entity -> entity.getClass() == Player.class).findFirst();
+                //if(e.getInvolvedEntities().stream().anyMatch(entity -> entity.getClass() == Player.class)) {
+                if (tmp.isPresent()) {
+                    this.handleCollision((Player)tmp.get());
+                }
             }
 //            Player player = null;
 //            for (ICollisionEntity entity : e.getInvolvedEntities()) {

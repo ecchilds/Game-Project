@@ -26,7 +26,16 @@ public class EyeballMob extends Mob {
     protected void handleCollision(Player player) {
 
         // freeze all players and begin battle (freezing is now handled by the battle window)
-        player.addTemporaryWindow(new BattleWindow("eye-battle", player.getId()));
+        BattleWindow battleWindow = new BattleWindow("eye-battle", player.getId());
+        battleWindow.onSuspend(() -> {
+            this.setVelocity(100F);
+        });
+
+        // temporarily add battle to player's active window deck
+        player.addTemporaryWindow(battleWindow);
+
+        // freeze monster
+        this.setVelocity(0);
     }
 
     @Override

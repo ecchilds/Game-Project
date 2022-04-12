@@ -1,6 +1,7 @@
 package com.gradle.game.entities;
 
 import com.gradle.game.GameManager;
+import com.gradle.game.entities.player.Player;
 import com.gradle.game.entities.player.PlayerManager;
 import de.gurkenlabs.litiengine.Direction;
 import de.gurkenlabs.litiengine.Game;
@@ -31,22 +32,20 @@ public class DoorWay extends Prop {
         // set event that occurs on player collision
         // TODO: specify collision with player only, not any entity
         this.onCollision(e -> {
-            //if (e.getInvolvedEntities().contains(Player.class)) {
-            //Player.instance().setVelocity(0);
-            PlayerManager.freezePlayers();
-            Game.window().getRenderComponent().fadeOut(750);
+            if (e.getSource().getClass() == Player.class) {
+                PlayerManager.freezePlayers();
+                Game.window().getRenderComponent().fadeOut(750);
 
-            Game.loop().perform(750, () -> {
-                // remove player before unloading the environment or the instance's animation controller will be disposed
-                Game.world().environment().removeAll(PlayerManager.getAll()); //TODO: replace with playermanager function
-                //Game.world().environment().remove(Player.instance());
+                Game.loop().perform(750, () -> {
 
-                //Load an environment, then spawn the player
-                String room = GameManager.getRoomName();
-                //Environment env = Game.world().loadEnvironment(getMapToOpen());
-                GameManager.spawn(getMapToOpen(), room+"-door");
-            });
-            //}
+                    // remove player before unloading the environment or the instance's animation controller will be disposed
+                    Game.world().environment().removeAll(PlayerManager.getAll()); //TODO: replace with playermanager function
+
+                    //Load an environment, then spawn the player
+                    String room = GameManager.getRoomName();
+                    GameManager.spawn(getMapToOpen(), room+"-door");
+                });
+            }
         });
     }
 
