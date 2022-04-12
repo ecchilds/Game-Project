@@ -2,7 +2,6 @@ package com.gradle.game;
 import com.gradle.game.gui.screens.ControllerScreen;
 import com.gradle.game.gui.screens.IngameScreen;
 import com.gradle.game.gui.screens.MainMenuScreen;
-import com.gradle.game.gui.screens.MenuScreen;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.resources.Resources;
 
@@ -19,10 +18,10 @@ public class GameApp {
         Game.graphics().setBaseRenderScale(4f);
 
         //import resources here
-        Resources.load("game.litidata");
+        Resources.load("game2.litidata");
 
         // Cassette noise while game is loading
-        Game.audio().playSound("267831__magedu__video-recorder-load-cassette-01v2.wav");
+        Game.audio().playSound("267831__magedu__video-recorder-load-cassette-01v2");
 
         // add menu screen first, so it can display first. If that doesn't work,
         // add Game.screens().display("MENU");

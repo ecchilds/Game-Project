@@ -1,6 +1,7 @@
 package com.gradle.game.gui.windows;
 
 import com.gradle.game.Sounds;
+import com.gradle.game.entities.player.PlayerManager;
 import com.gradle.game.gui.FontTypes;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.gui.Appearance;
@@ -17,8 +18,8 @@ public class BattleWindow extends Window{
     private int selectedColumn = 0;
     //private int selectedRow;
 
-    public BattleWindow(String name) {
-        super(name);
+    public BattleWindow(String name, int playerId) {
+        super(name, playerId);
     }
 
     //TODO: add constructor that takes monsters, 2 player and 1-2 enemy monsters
@@ -29,10 +30,6 @@ public class BattleWindow extends Window{
             @Override
             protected void initializeComponents() {
                 super.initializeComponents();
-
-                this.getAppearance().setBackgroundColor1(Color.WHITE);
-                this.getAppearance().setTransparentBackground(false);
-                menu.getAppearanceHovered().update(this.getAppearance());
 
                 //init menu
                 menu = new ImageComponentList(x, y+(height*0.9), width, height*0.1, 1, 3, null, null);
@@ -120,5 +117,13 @@ public class BattleWindow extends Window{
         selectedColumn = 0;
         //selectedRow = 0;
         this.menu.getCellComponents().get(0).setHovered(true);
+
+        PlayerManager.freezePlayers();
+    }
+
+    @Override
+    protected void onXPress() {
+        PlayerManager.unFreezePlayers();
+        super.onXPress();
     }
 }

@@ -80,3 +80,219 @@ Jan 21, 2022 6:11:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap 
 WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
 Jan 21, 2022 6:11:00 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
 WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:11:33 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:11:33 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:11:33 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:12:10 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:12:10 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:12:11 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:12:11 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:14:44 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:14:44 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:14:44 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:14:45 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:14:46 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:14:47 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:14:47 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:17:07 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:17:07 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:17:07 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:17:09 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:18:43 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:18:43 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:18:43 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:18:44 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:18:45 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:18:51 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:21:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:21:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:21:20 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:21:21 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:21:21 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:24:55 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:24:55 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:24:55 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:24:55 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:24:56 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:26:43 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:26:43 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:26:43 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:26:44 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:29:55 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:29:55 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:29:55 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:29:56 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:32:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:32:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:32:20 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:32:21 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:33:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:33:20 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:33:20 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:33:21 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:34:25 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:34:25 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:34:25 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:34:26 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:35:42 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:35:42 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:35:42 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:40:25 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:40:25 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:40:25 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:42:46 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:42:46 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:42:46 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:43:41 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:43:41 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:43:41 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/267831__magedu__video-recorder-load-cassette-01v2.wav could not be loaded.
+Apr 11, 2022 6:44:08 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:44:08 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:44:29 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:44:29 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:44:29 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:44:29 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/485486__volkbutphan__button-v03.ogg could not be loaded.
+Apr 11, 2022 6:44:29 PM de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/caspar/IdeaProjects/testGame/489008__rolandseer__button-click-short.wav could not be loaded.
+Apr 11, 2022 6:44:58 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:44:58 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:46:50 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:46:50 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:47:14 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:47:14 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:49:34 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:49:34 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:49:58 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:49:58 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:50:02 PM de.gurkenlabs.litiengine.UpdateLoop update
+SEVERE: Cannot invoke "de.gurkenlabs.litiengine.gui.ImageComponentList.getAppearanceHovered()" because "this.this$0.menu" is null
+java.lang.NullPointerException: Cannot invoke "de.gurkenlabs.litiengine.gui.ImageComponentList.getAppearanceHovered()" because "this.this$0.menu" is null
+	at com.gradle.game.gui.windows.BattleWindow$1.initializeComponents(BattleWindow.java:35)
+	at de.gurkenlabs.litiengine.gui.GuiComponent.<init>(GuiComponent.java:182)
+	at com.gradle.game.gui.windows.BattleWindow$1.<init>(BattleWindow.java:28)
+	at com.gradle.game.gui.windows.BattleWindow.buildBody(BattleWindow.java:28)
+	at com.gradle.game.gui.windows.Window.initializeComponents(Window.java:124)
+	at de.gurkenlabs.litiengine.gui.GuiComponent.<init>(GuiComponent.java:182)
+	at com.gradle.game.gui.windows.Window.<init>(Window.java:51)
+	at com.gradle.game.gui.windows.Window.<init>(Window.java:47)
+	at com.gradle.game.gui.windows.Window.<init>(Window.java:37)
+	at com.gradle.game.gui.windows.Window.<init>(Window.java:33)
+	at com.gradle.game.gui.windows.BattleWindow.<init>(BattleWindow.java:21)
+	at com.gradle.game.entities.mobs.EyeballMob.handleCollision(EyeballMob.java:30)
+	at com.gradle.game.entities.mobs.Mob.lambda$new$0(Mob.java:28)
+	at de.gurkenlabs.litiengine.entities.CollisionEntity.fireCollisionEvent(CollisionEntity.java:284)
+	at de.gurkenlabs.litiengine.physics.PhysicsEngine.fireCollisionEvents(PhysicsEngine.java:967)
+	at de.gurkenlabs.litiengine.physics.PhysicsEngine.resolveCollision(PhysicsEngine.java:892)
+	at de.gurkenlabs.litiengine.physics.PhysicsEngine.resolveCollisionForNewPosition(PhysicsEngine.java:922)
+	at de.gurkenlabs.litiengine.physics.PhysicsEngine.move(PhysicsEngine.java:697)
+	at de.gurkenlabs.litiengine.physics.PhysicsEngine.move(PhysicsEngine.java:618)
+	at de.gurkenlabs.litiengine.physics.MovementController.moveEntity(MovementController.java:155)
+	at de.gurkenlabs.litiengine.physics.MovementController.handleMovement(MovementController.java:122)
+	at de.gurkenlabs.litiengine.physics.MovementController.update(MovementController.java:85)
+	at de.gurkenlabs.litiengine.UpdateLoop.update(UpdateLoop.java:154)
+	at de.gurkenlabs.litiengine.UpdateLoop.process(UpdateLoop.java:138)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:87)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+Apr 11, 2022 6:51:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 6:51:56 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 7:07:21 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 7:07:21 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 7:07:57 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 7:07:57 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 7:34:49 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 7:34:49 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 8:16:35 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion" is greater than the supported version 1.2.x. Some features may not work.
+Apr 11, 2022 8:16:35 PM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.7.2 of map "mansion2" is greater than the supported version 1.2.x. Some features may not work.

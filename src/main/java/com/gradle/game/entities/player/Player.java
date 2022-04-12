@@ -17,7 +17,7 @@ import java.util.ArrayDeque;
 
 @EntityInfo(width = 32, height = 32)
 @MovementInfo(velocity = 100)
-@CollisionInfo(collisionBoxWidth = 20, collisionBoxHeight = 6, collision = true, valign = Valign.DOWN)
+@CollisionInfo(collisionBoxWidth = 12, collisionBoxHeight = 6, collision = true, valign = Valign.DOWN)
 public class Player extends Creature {
     private final int id;
     private final String characterName;
@@ -51,7 +51,11 @@ public class Player extends Creature {
         this.save = SaveGame.loadSavedGameFile(characterName);
         Game.screens().add(new PauseScreen(id));
 
-        WindowManager.add(new CreaturesWindow("P"+id+"-CREATURES"));
+        CreaturesWindow creaturesWindow = new CreaturesWindow("P" + id + "-CREATURES", id);
+        creaturesWindow.onSuspend(() -> {
+            activeWindows.remove(creaturesWindow);
+        });
+        WindowManager.add(creaturesWindow);
     }
 
     @Override
@@ -62,7 +66,7 @@ public class Player extends Creature {
     }
 
     // ========================================================================================================================
-    // Controller interaction functions
+    // Controller/window interaction functions
 
     public void loadPauseMenu() {
         if(Game.screens().current().getName().equals("INGAME-SCREEN")) {
@@ -85,10 +89,22 @@ public class Player extends Creature {
         }
     }
 
+    //functions to be called by a window on preparation and suspension
+    public void addActiveWindow(Window window) {
+        activeWindows.add(window);
+    }
+    public void removeActiveWindow(Window window) {
+        activeWindows.remove(window);
+    }
+
     // adds a window that is destroyed upon closing
-    public <T extends Window> void addWindow(T window) {
+    public <T extends Window> void addTemporaryWindow(T window) {
         Game.screens().get("INGAME-SCREEN").getComponents().add(window);
+        window.onSuspend(() -> {
+            Game.screens().get("INGAME-SCREEN").getComponents().remove(window);
+        });
         window.prepare();
+
         activeWindows.push(window);
     }
 

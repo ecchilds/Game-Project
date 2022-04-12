@@ -17,9 +17,9 @@ public class CreaturesWindow extends Window {
 
     private Menu menu;
 
-    public CreaturesWindow(String name) {this(name, 100, 200, 150, 200);}
-    public CreaturesWindow(String name, double x, double y) {super(name, x, y);}
-    public CreaturesWindow(String name, double x, double y, double width, double height) {super(name, x, y, width, height);}
+    public CreaturesWindow(String name, int playerId) {this(name, playerId, 100, 200, 150, 200);}
+    public CreaturesWindow(String name, int playerId, double x, double y) {super(name, playerId, x, y);}
+    public CreaturesWindow(String name, int playerId, double x, double y, double width, double height) {super(name, playerId, x, y, width, height);}
 
     @Override
     protected GuiComponent buildBody(double x, double y, double width, double height) {

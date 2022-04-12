@@ -2,10 +2,10 @@ package com.gradle.game.entities.mobs;
 
 import com.gradle.game.entities.player.Player;
 import com.gradle.game.gui.windows.BattleWindow;
+import com.gradle.game.gui.windows.Window;
 import de.gurkenlabs.litiengine.Valign;
 import de.gurkenlabs.litiengine.entities.CollisionInfo;
 import de.gurkenlabs.litiengine.entities.EntityInfo;
-import de.gurkenlabs.litiengine.entities.MovementInfo;
 
 import java.awt.*;
 
@@ -25,9 +25,8 @@ public class EyeballMob extends Mob {
     @Override
     protected void handleCollision(Player player) {
 
-        //freeze player and begin battle
-        player.setVelocity(0f);
-        player.addWindow(new BattleWindow("eye-battle"));
+        // freeze all players and begin battle (freezing is now handled by the battle window)
+        player.addTemporaryWindow(new BattleWindow("eye-battle", player.getId()));
     }
 
     @Override

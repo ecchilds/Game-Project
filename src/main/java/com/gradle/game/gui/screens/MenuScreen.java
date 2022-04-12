@@ -163,7 +163,7 @@ public abstract class MenuScreen extends Screen implements IUpdateable {
         });
     }
 
-    // NEVER call menuOptionSelect raw, always use this. (Except for controllerscreen, that's a special case.
+    // NEVER call menuOptionSelect raw, always use this. (Except for controllerscreen, that's a special case).
     protected void menuOptionSelectWrapper() {
         menuOptionSelect();
         this.menu.setEnabled(false); //disables all buttons, so they can't be entered multiple times

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class ControllerScreen extends MenuScreen {
 
-    private int instances;
+    private int playerCount;
     private int currentPlayer = 0;
     private int currentGamepad = 1;
     private ArrayList<Integer> selectedGamepads = new ArrayList<>();
@@ -76,7 +76,7 @@ public class ControllerScreen extends MenuScreen {
         final double buttonWidth = 200;
         final double buttonHeight = FontTypes.MENU.getSize();
 
-        instances = PlayerManager.getAll().size();
+        playerCount = PlayerManager.getAll().size();
         currentPlayer = 0;
         currentGamepad = 1;
         selectedGamepads = new ArrayList<>();
@@ -144,7 +144,7 @@ public class ControllerScreen extends MenuScreen {
         // this is mostly just used to clean up after listener procs
         Game.audio().playSound(Sounds.MENU_SELECT);
 
-        if (this.currentPlayer < this.instances-1 && this.currentPlayer < this.options-1) {
+        if (this.currentPlayer < this.playerCount -1 && this.currentPlayer < this.options-1) {
             //set up next screen
             this.currentPlayer++;
             this.playerLabel.setText("Player " + (currentPlayer +1));

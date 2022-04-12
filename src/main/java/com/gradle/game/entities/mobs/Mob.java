@@ -9,16 +9,19 @@ import de.gurkenlabs.litiengine.entities.Creature;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.util.Random;
 
 public abstract class Mob extends Creature implements IUpdateable {
 
     protected Polygon view;
     protected boolean alerted;
 
+
     protected Mob(String spritesheetName) {
         super(spritesheetName);
         this.view = createView();
         this.alerted = false;
+
 
         this.onCollision(e -> {
             if(e.getSource().getClass() == Player.class) {

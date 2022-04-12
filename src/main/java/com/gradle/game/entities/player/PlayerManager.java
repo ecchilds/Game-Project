@@ -4,8 +4,8 @@ import com.gradle.game.GameManager;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.physics.IMovementController;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class PlayerManager {
 
@@ -13,12 +13,12 @@ public final class PlayerManager {
     private static final float defaultVelocity = 100;
     private static int currentPlayerNum;
 
-    private static final ArrayList<Player> players = new ArrayList<>();
+    private static final Map<Integer, Player> players = new ConcurrentHashMap<>();
     private static boolean initialized = false;
 
     public static void init() {
         currentPlayerNum = 1;
-        players.add(new Player("hoodie"));
+        players.put(0, new Player("hoodie"));
 
         initialized = true;
     }
@@ -37,11 +37,11 @@ public final class PlayerManager {
     }
 
     public static List<Player> getAll() {
-        return players;
+        return players.values().stream().toList();
     }
 
     public static Player getByGamepadId(int id) {
-        for (Player player : players) {
+        for (Player player : players.values()) {
             if (!player.isKeyboardControlled() && player.getGamepad().getId() == id) {
                 return player;
             }
@@ -52,26 +52,26 @@ public final class PlayerManager {
 
     public static void addPlayer(String spriteSheetName, String characterName, boolean gamepad) {
         Player player = new Player(spriteSheetName, currentPlayerNum, characterName);
-        currentPlayerNum++;
         if (gamepad) {
             player.setController(IMovementController.class, new PlayerGamepadController(player));
             player.setKeyboardControlled(false);
         }
-        players.add(player);
+        players.put(currentPlayerNum, player);
+        currentPlayerNum++;
         GameManager.spawnIn(player);
     }
 
     public static void addPlayer(String spriteSheetName, String characterName, int gamepadId) {
         Player player = new Player(spriteSheetName, currentPlayerNum, characterName);
-        currentPlayerNum++;
         player.setController(IMovementController.class, new PlayerGamepadController(player, gamepadId));
         player.setKeyboardControlled(false);
-        players.add(player);
+        players.put(currentPlayerNum, player);
+        currentPlayerNum++;
         GameManager.spawnIn(player);
     }
 
     public static void saveGames() {
-        players.forEach(Player::saveGame);
+        players.values().forEach(Player::saveGame);
     }
 
     public static void freezePlayers() {
@@ -87,7 +87,7 @@ public final class PlayerManager {
     }
 
     public static void setPlayerSpeeds(float i) {
-        players.forEach(p -> p.setVelocity(i));
+        players.values().forEach(p -> p.setVelocity(i));
     }
 
     public static int size() {
